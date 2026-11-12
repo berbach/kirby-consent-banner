@@ -1,6 +1,6 @@
 # Consent Banner für Kirby
 
-Kirby-Plugin `berbach/kirby-consent-banner`: ein Consent-Banner mit
+Kirby-Plugin `bb/kirby-consent-banner`: ein Consent-Banner mit
 **Google Consent Mode v2**, **Matomo**- und **Script**-Steuerung, einem
 **Consent-Protokoll** und der Freischaltung eingebetteter Inhalte **ohne
 Seiten-Reload**. Es ist die Kirby-Fassung der TYPO3-Extension
@@ -48,7 +48,7 @@ speak German and English.*
 ## Installation
 
 ```bash
-composer require berbach/kirby-consent-banner
+composer require bb/kirby-consent-banner
 ```
 
 Solange das Paket nicht bei Packagist liegt, zuvor das Repository eintragen:
@@ -80,7 +80,7 @@ fest:
 ```php
 // site/config/config.php
 return [
-    'berbach.consent-banner.language' => 'de',
+    'bb.consent-banner.language' => 'de',
 ];
 ```
 

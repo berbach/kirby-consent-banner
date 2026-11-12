@@ -1,6 +1,6 @@
 # A component: one service the visitor agrees to, with its integration type
 # and the cookie information.
-title: berbach.consent-banner.blueprint.component
+title: bb.consent-banner.blueprint.component
 icon: toggle-on
 num: default
 
@@ -11,49 +11,49 @@ options:
 # A draft is left out of the banner
 status:
   draft:
-    label: berbach.consent-banner.status.draft
-    text: berbach.consent-banner.status.component.draft.text
+    label: bb.consent-banner.status.draft
+    text: bb.consent-banner.status.component.draft.text
   listed:
-    label: berbach.consent-banner.status.active
-    text: berbach.consent-banner.status.component.active.text
+    label: bb.consent-banner.status.active
+    text: bb.consent-banner.status.component.active.text
 
 tabs:
   general:
-    label: berbach.consent-banner.tab.general
+    label: bb.consent-banner.tab.general
     icon: text
     fields:
       component_description:
-        label: berbach.consent-banner.field.component_description
+        label: bb.consent-banner.field.component_description
         type: textarea
         buttons: false
         size: small
 
   integration:
-    label: berbach.consent-banner.tab.integration
+    label: bb.consent-banner.tab.integration
     icon: code
     fields:
       integration_type:
-        label: berbach.consent-banner.field.integration_type
-        help: berbach.consent-banner.field.integration_type.help
+        label: bb.consent-banner.field.integration_type
+        help: bb.consent-banner.field.integration_type.help
         type: select
         default: iframe
         required: true
         translate: false
         options:
-          iframe: berbach.consent-banner.field.integration_type.iframe
-          google_consent_mode: berbach.consent-banner.field.integration_type.google_consent_mode
-          matomo: berbach.consent-banner.field.integration_type.matomo
-          script: berbach.consent-banner.field.integration_type.script
+          iframe: bb.consent-banner.field.integration_type.iframe
+          google_consent_mode: bb.consent-banner.field.integration_type.google_consent_mode
+          matomo: bb.consent-banner.field.integration_type.matomo
+          script: bb.consent-banner.field.integration_type.script
       component_target:
-        label: berbach.consent-banner.field.component_target
-        help: berbach.consent-banner.field.component_target.help
+        label: bb.consent-banner.field.component_target
+        help: bb.consent-banner.field.component_target.help
         type: tags
         translate: false
         when:
           integration_type: iframe
       consent_mode_signals:
-        label: berbach.consent-banner.field.consent_mode_signals
-        help: berbach.consent-banner.field.consent_mode_signals.help
+        label: bb.consent-banner.field.consent_mode_signals
+        help: bb.consent-banner.field.consent_mode_signals.help
         type: checkboxes
         columns: 2
         translate: false
@@ -69,16 +69,16 @@ tabs:
           integration_type: google_consent_mode
 
   javascript:
-    label: berbach.consent-banner.tab.javascript
+    label: bb.consent-banner.tab.javascript
     icon: terminal
     fields:
       javascript_info:
-        label: berbach.consent-banner.tab.javascript
+        label: bb.consent-banner.tab.javascript
         type: info
-        text: berbach.consent-banner.field.javascript.info
+        text: bb.consent-banner.field.javascript.info
       accepted_script:
-        label: berbach.consent-banner.field.accepted_script
-        help: berbach.consent-banner.field.accepted_script.help
+        label: bb.consent-banner.field.accepted_script
+        help: bb.consent-banner.field.accepted_script.help
         type: textarea
         buttons: false
         font: monospace
@@ -86,8 +86,8 @@ tabs:
         size: large
         translate: false
       rejected_script:
-        label: berbach.consent-banner.field.rejected_script
-        help: berbach.consent-banner.field.rejected_script.help
+        label: bb.consent-banner.field.rejected_script
+        help: bb.consent-banner.field.rejected_script.help
         type: textarea
         buttons: false
         font: monospace
@@ -96,50 +96,50 @@ tabs:
         translate: false
 
   placeholder:
-    label: berbach.consent-banner.tab.placeholder
+    label: bb.consent-banner.tab.placeholder
     icon: image
     fields:
       placeholder_title:
-        label: berbach.consent-banner.field.placeholder_title
-        help: berbach.consent-banner.field.placeholder_title.help
+        label: bb.consent-banner.field.placeholder_title
+        help: bb.consent-banner.field.placeholder_title.help
         type: text
       placeholder_description:
-        label: berbach.consent-banner.field.placeholder_description
+        label: bb.consent-banner.field.placeholder_description
         type: textarea
         buttons: false
         size: small
 
   cookies:
-    label: berbach.consent-banner.tab.cookie_information
+    label: bb.consent-banner.tab.cookie_information
     icon: info-card
     fields:
       service_name:
-        label: berbach.consent-banner.field.service_name
-        help: berbach.consent-banner.field.service_name.description
+        label: bb.consent-banner.field.service_name
+        help: bb.consent-banner.field.service_name.description
         type: consentservice
         icon: search
       service_provider:
-        label: berbach.consent-banner.field.service_provider
+        label: bb.consent-banner.field.service_provider
         type: text
         width: 1/2
         translate: false
       service_publisher:
-        label: berbach.consent-banner.field.service_publisher
+        label: bb.consent-banner.field.service_publisher
         type: text
         width: 1/2
       service_privacy_link:
-        label: berbach.consent-banner.field.service_privacy_link
+        label: bb.consent-banner.field.service_privacy_link
         type: link
         options:
           - url
           - page
       service_data_collected:
-        label: berbach.consent-banner.field.service_data_collected
+        label: bb.consent-banner.field.service_data_collected
         type: textarea
         buttons: false
         size: small
       cookies:
-        label: berbach.consent-banner.field.cookies
+        label: bb.consent-banner.field.cookies
         type: structure
         columns:
           cookie_name:
@@ -152,25 +152,25 @@ tabs:
             width: 1/4
         fields:
           cookie_name:
-            label: berbach.consent-banner.field.cookie_name
+            label: bb.consent-banner.field.cookie_name
             type: text
             required: true
             width: 1/2
           cookie_type:
-            label: berbach.consent-banner.field.cookie_type
-            help: berbach.consent-banner.field.cookie_type.help
+            label: bb.consent-banner.field.cookie_type
+            help: bb.consent-banner.field.cookie_type.help
             type: text
             width: 1/2
           cookie_purpose:
-            label: berbach.consent-banner.field.cookie_purpose
+            label: bb.consent-banner.field.cookie_purpose
             type: text
             width: 1/2
           cookie_lifetime:
-            label: berbach.consent-banner.field.cookie_lifetime
+            label: bb.consent-banner.field.cookie_lifetime
             type: text
             width: 1/2
           cookie_description:
-            label: berbach.consent-banner.field.cookie_description
+            label: bb.consent-banner.field.cookie_description
             type: textarea
             buttons: false
             size: small

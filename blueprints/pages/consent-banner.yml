@@ -1,5 +1,5 @@
 # The banner: texts, layout, lifetimes and tracking. Its groups are children.
-title: berbach.consent-banner.blueprint.banner
+title: bb.consent-banner.blueprint.banner
 icon: shield
 
 options:
@@ -12,25 +12,25 @@ options:
 # A draft is switched off, a published banner is shown in the frontend
 status:
   draft:
-    label: berbach.consent-banner.status.banner.draft
-    text: berbach.consent-banner.status.banner.draft.text
+    label: bb.consent-banner.status.banner.draft
+    text: bb.consent-banner.status.banner.draft.text
   unlisted:
-    label: berbach.consent-banner.status.banner.active
-    text: berbach.consent-banner.status.banner.active.text
+    label: bb.consent-banner.status.banner.active
+    text: bb.consent-banner.status.banner.active.text
 
 tabs:
   banner:
-    label: berbach.consent-banner.tab.banner
+    label: bb.consent-banner.tab.banner
     icon: shield
     columns:
       main:
         width: 2/3
         fields:
           banner_title:
-            label: berbach.consent-banner.field.banner_title
+            label: bb.consent-banner.field.banner_title
             type: text
           banner_description:
-            label: berbach.consent-banner.field.banner_description
+            label: bb.consent-banner.field.banner_description
             type: writer
             inline: true
             marks:
@@ -38,7 +38,7 @@ tabs:
               - italic
               - link
           banner_navigation:
-            label: berbach.consent-banner.field.banner_navigation
+            label: bb.consent-banner.field.banner_navigation
             type: pages
             multiple: true
             translate: false
@@ -46,185 +46,185 @@ tabs:
         width: 1/3
         fields:
           banner_version:
-            label: berbach.consent-banner.field.banner_version
-            help: berbach.consent-banner.field.banner_version.help
+            label: bb.consent-banner.field.banner_version
+            help: bb.consent-banner.field.banner_version.help
             type: number
             default: 1
             disabled: true
             translate: false
 
   groups:
-    label: berbach.consent-banner.tab.groups
+    label: bb.consent-banner.tab.groups
     icon: layers
     sections:
       groups:
-        label: berbach.consent-banner.field.consent_groups
-        help: berbach.consent-banner.field.consent_groups.help
+        label: bb.consent-banner.field.consent_groups
+        help: bb.consent-banner.field.consent_groups.help
         type: pages
         templates: consent-banner-group
         status: all
-        info: "{{ page.group_essential.toBool ? t('berbach.consent-banner.group.essential') : '' }}"
+        info: "{{ page.group_essential.toBool ? t('bb.consent-banner.group.essential') : '' }}"
         image: false
 
   labels:
-    label: berbach.consent-banner.tab.text_for_labels
+    label: bb.consent-banner.tab.text_for_labels
     icon: text
     fields:
       buttons_headline:
-        label: berbach.consent-banner.palette.buttonsLabelText
-        help: berbach.consent-banner.palette.labels.help
+        label: bb.consent-banner.palette.buttonsLabelText
+        help: bb.consent-banner.palette.labels.help
         type: headline
       accept_all_text:
-        label: berbach.consent-banner.field.accept_all_text
-        placeholder: berbach.consent-banner.accept_all_text
+        label: bb.consent-banner.field.accept_all_text
+        placeholder: bb.consent-banner.accept_all_text
         type: text
         width: 1/2
       confirm_selection_text:
-        label: berbach.consent-banner.field.confirm_selection_text
-        placeholder: berbach.consent-banner.confirm_selection_text
+        label: bb.consent-banner.field.confirm_selection_text
+        placeholder: bb.consent-banner.confirm_selection_text
         type: text
         width: 1/2
       save_and_close_text:
-        label: berbach.consent-banner.field.save_and_close_text
-        placeholder: berbach.consent-banner.save_and_close_text
+        label: bb.consent-banner.field.save_and_close_text
+        placeholder: bb.consent-banner.save_and_close_text
         type: text
         width: 1/2
       advanced_settings_text:
-        label: berbach.consent-banner.field.advanced_settings_text
-        placeholder: berbach.consent-banner.advanced_settings_text
+        label: bb.consent-banner.field.advanced_settings_text
+        placeholder: bb.consent-banner.advanced_settings_text
         type: text
         width: 1/2
       accept_essential_text:
-        label: berbach.consent-banner.field.accept_essential_text
-        placeholder: berbach.consent-banner.accept_essential_text
+        label: bb.consent-banner.field.accept_essential_text
+        placeholder: bb.consent-banner.accept_essential_text
         type: text
         width: 1/2
       cookie_info_headline:
-        label: berbach.consent-banner.palette.cookieInfoLabels
+        label: bb.consent-banner.palette.cookieInfoLabels
         type: headline
       cookie_name_text:
-        label: berbach.consent-banner.field.cookie_name_text
-        placeholder: berbach.consent-banner.cookie_name_text
+        label: bb.consent-banner.field.cookie_name_text
+        placeholder: bb.consent-banner.cookie_name_text
         type: text
         width: 1/2
       cookie_lifetime_text:
-        label: berbach.consent-banner.field.cookie_lifetime_text
-        placeholder: berbach.consent-banner.cookie_lifetime_text
+        label: bb.consent-banner.field.cookie_lifetime_text
+        placeholder: bb.consent-banner.cookie_lifetime_text
         type: text
         width: 1/2
       cookie_provider_text:
-        label: berbach.consent-banner.field.cookie_provider_text
-        placeholder: berbach.consent-banner.cookie_provider_text
+        label: bb.consent-banner.field.cookie_provider_text
+        placeholder: bb.consent-banner.cookie_provider_text
         type: text
         width: 1/2
       cookie_purpose_text:
-        label: berbach.consent-banner.field.cookie_purpose_text
-        placeholder: berbach.consent-banner.cookie_purpose_text
+        label: bb.consent-banner.field.cookie_purpose_text
+        placeholder: bb.consent-banner.cookie_purpose_text
         type: text
         width: 1/2
       cookie_description_text:
-        label: berbach.consent-banner.field.cookie_description_text
-        placeholder: berbach.consent-banner.cookie_description_text
+        label: bb.consent-banner.field.cookie_description_text
+        placeholder: bb.consent-banner.cookie_description_text
         type: text
         width: 1/2
       cookie_more_headline:
-        label: berbach.consent-banner.palette.cookieMoreInfoLabels
+        label: bb.consent-banner.palette.cookieMoreInfoLabels
         type: headline
       cookie_infos_show_text:
-        label: berbach.consent-banner.field.cookie_infos_show_text
-        placeholder: berbach.consent-banner.cookie_infos_show_text
+        label: bb.consent-banner.field.cookie_infos_show_text
+        placeholder: bb.consent-banner.cookie_infos_show_text
         type: text
         width: 1/2
       cookie_infos_close_text:
-        label: berbach.consent-banner.field.cookie_infos_close_text
-        placeholder: berbach.consent-banner.cookie_infos_close_text
+        label: bb.consent-banner.field.cookie_infos_close_text
+        placeholder: bb.consent-banner.cookie_infos_close_text
         type: text
         width: 1/2
 
   settings:
-    label: berbach.consent-banner.tab.banner_setting
+    label: bb.consent-banner.tab.banner_setting
     icon: cog
     fields:
       layout_headline:
-        label: berbach.consent-banner.palette.bannerLayout
+        label: bb.consent-banner.palette.bannerLayout
         type: headline
       banner_layout:
-        label: berbach.consent-banner.field.banner_layout
+        label: bb.consent-banner.field.banner_layout
         type: select
         default: cb-bottom
         required: true
         translate: false
         options:
-          cb-overlay: berbach.consent-banner.field.banner_layout.cb-overlay
-          cb-overlay-compact: berbach.consent-banner.field.banner_layout.cb-overlay-compact
-          cb-bottom: berbach.consent-banner.field.banner_layout.cb-bottom
+          cb-overlay: bb.consent-banner.field.banner_layout.cb-overlay
+          cb-overlay-compact: bb.consent-banner.field.banner_layout.cb-overlay-compact
+          cb-bottom: bb.consent-banner.field.banner_layout.cb-bottom
       opener_headline:
-        label: berbach.consent-banner.palette.bannerPrivacySettingsVariant
+        label: bb.consent-banner.palette.bannerPrivacySettingsVariant
         type: headline
       privacy_settings_variant:
-        label: berbach.consent-banner.field.privacy_settings_variant
-        help: berbach.consent-banner.field.privacy_settings_variant.description
+        label: bb.consent-banner.field.privacy_settings_variant
+        help: bb.consent-banner.field.privacy_settings_variant.description
         type: select
         default: "20"
         required: true
         translate: false
         options:
           - value: "10"
-            text: berbach.consent-banner.field.privacy_settings_variant.text_link
+            text: bb.consent-banner.field.privacy_settings_variant.text_link
           - value: "20"
-            text: berbach.consent-banner.field.privacy_settings_variant.button_widget
+            text: bb.consent-banner.field.privacy_settings_variant.button_widget
       text_link_text:
-        label: berbach.consent-banner.field.text_link_text
-        placeholder: berbach.consent-banner.text_link_text
+        label: bb.consent-banner.field.text_link_text
+        placeholder: bb.consent-banner.text_link_text
         type: text
         width: 1/3
         when:
           privacy_settings_variant: "10"
       target_footer_navigation:
-        label: berbach.consent-banner.field.target_footer_navigation
-        help: berbach.consent-banner.field.target_footer_navigation.description
+        label: bb.consent-banner.field.target_footer_navigation
+        help: bb.consent-banner.field.target_footer_navigation.description
         type: text
         width: 1/3
         translate: false
         when:
           privacy_settings_variant: "10"
       text_link_position:
-        label: berbach.consent-banner.field.text_link_position
+        label: bb.consent-banner.field.text_link_position
         type: select
         default: last
         required: true
         width: 1/3
         translate: false
         options:
-          first: berbach.consent-banner.field.text_link_position.first
-          last: berbach.consent-banner.field.text_link_position.last
+          first: bb.consent-banner.field.text_link_position.first
+          last: bb.consent-banner.field.text_link_position.last
         when:
           privacy_settings_variant: "10"
       button_widget_text:
-        label: berbach.consent-banner.field.button_widget_text
-        placeholder: berbach.consent-banner.button_widget_text
+        label: bb.consent-banner.field.button_widget_text
+        placeholder: bb.consent-banner.button_widget_text
         type: text
         width: 1/2
         when:
           privacy_settings_variant: "20"
       button_widget_position:
-        label: berbach.consent-banner.field.button_widget_position
+        label: bb.consent-banner.field.button_widget_position
         type: select
         default: left
         required: true
         width: 1/2
         translate: false
         options:
-          left: berbach.consent-banner.field.button_widget_position.left
-          right: berbach.consent-banner.field.button_widget_position.right
+          left: bb.consent-banner.field.button_widget_position.left
+          right: bb.consent-banner.field.button_widget_position.right
         when:
           privacy_settings_variant: "20"
       lifetime_headline:
-        label: berbach.consent-banner.palette.cookieLifeTime
+        label: bb.consent-banner.palette.cookieLifeTime
         type: headline
       lifetime_banner:
-        label: berbach.consent-banner.field.lifetime_banner
-        help: berbach.consent-banner.field.lifetime_banner.description
+        label: bb.consent-banner.field.lifetime_banner
+        help: bb.consent-banner.field.lifetime_banner.description
         type: select
         default: "14"
         required: true
@@ -232,14 +232,14 @@ tabs:
         translate: false
         options:
           - value: "14"
-            text: berbach.consent-banner.field.lifetime_banner.l14days
+            text: bb.consent-banner.field.lifetime_banner.l14days
           - value: "21"
-            text: berbach.consent-banner.field.lifetime_banner.l21days
+            text: bb.consent-banner.field.lifetime_banner.l21days
           - value: "28"
-            text: berbach.consent-banner.field.lifetime_banner.l28days
+            text: bb.consent-banner.field.lifetime_banner.l28days
       lifetime_user_consent:
-        label: berbach.consent-banner.field.lifetime_user_consent
-        help: berbach.consent-banner.field.lifetime_user_consent.description
+        label: bb.consent-banner.field.lifetime_user_consent
+        help: bb.consent-banner.field.lifetime_user_consent.description
         type: select
         default: "1095"
         required: true
@@ -247,36 +247,36 @@ tabs:
         translate: false
         options:
           - value: "365"
-            text: berbach.consent-banner.field.lifetime_user_consent.l1year
+            text: bb.consent-banner.field.lifetime_user_consent.l1year
           - value: "730"
-            text: berbach.consent-banner.field.lifetime_user_consent.l2years
+            text: bb.consent-banner.field.lifetime_user_consent.l2years
           - value: "1095"
-            text: berbach.consent-banner.field.lifetime_user_consent.l3years
+            text: bb.consent-banner.field.lifetime_user_consent.l3years
 
   tracking:
-    label: berbach.consent-banner.tab.tracking
+    label: bb.consent-banner.tab.tracking
     icon: chart
     fields:
       gtm_container_id:
-        label: berbach.consent-banner.field.gtm_container_id
-        help: berbach.consent-banner.field.gtm_container_id.help
+        label: bb.consent-banner.field.gtm_container_id
+        help: bb.consent-banner.field.gtm_container_id.help
         placeholder: GTM-XXXXXX
         type: text
         translate: false
       matomo_url:
-        label: berbach.consent-banner.field.matomo_url
-        help: berbach.consent-banner.field.matomo_url.help
+        label: bb.consent-banner.field.matomo_url
+        help: bb.consent-banner.field.matomo_url.help
         placeholder: https://matomo.example.com/
         type: url
         width: 2/3
         translate: false
       matomo_site_id:
-        label: berbach.consent-banner.field.matomo_site_id
+        label: bb.consent-banner.field.matomo_site_id
         type: text
         width: 1/3
         translate: false
       matomo_mtm_url:
-        label: berbach.consent-banner.field.matomo_mtm_url
-        help: berbach.consent-banner.field.matomo_mtm_url.help
+        label: bb.consent-banner.field.matomo_mtm_url
+        help: bb.consent-banner.field.matomo_mtm_url.help
         type: url
         translate: false

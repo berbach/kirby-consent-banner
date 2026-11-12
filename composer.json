@@ -1,5 +1,5 @@
 {
-  "name": "berbach/kirby-consent-banner",
+  "name": "bb/kirby-consent-banner",
   "description": "Consent banner for Kirby with Google Consent Mode v2, Matomo and script control, consent log (SQLite), cookie information and placeholders for embedded content",
   "type": "kirby-plugin",
   "license": "GPL-2.0-or-later",

@@ -81,7 +81,7 @@ Kirby::plugin(ConsentBanner::PLUGIN, [
         'nonce' => null,
     ],
 
-    // Role blueprints: permissions: berbach.consent-banner: access: false
+    // Role blueprints: permissions: bb.consent-banner: access: false
     'permissions' => [
         'access' => true,
     ],

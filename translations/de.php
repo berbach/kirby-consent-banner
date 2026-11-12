@@ -2,7 +2,7 @@
 
 /**
  * Deutsche Texte. Die Schlüssel bekommen in index.php das Präfix
- * "berbach.consent-banner.". Der erste Block ist, was Besucher lesen, der
+ * "bb.consent-banner.". Der erste Block ist, was Besucher lesen, der
  * Rest ist das Panel.
  */
 return [

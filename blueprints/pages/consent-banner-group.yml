@@ -1,6 +1,6 @@
 # A group of the banner, e.g. "Essential" or "Analytics". Its components are
 # children.
-title: berbach.consent-banner.blueprint.group
+title: bb.consent-banner.blueprint.group
 icon: layers
 num: default
 
@@ -12,11 +12,11 @@ options:
 # A draft is left out of the banner
 status:
   draft:
-    label: berbach.consent-banner.status.draft
-    text: berbach.consent-banner.status.group.draft.text
+    label: bb.consent-banner.status.draft
+    text: bb.consent-banner.status.group.draft.text
   listed:
-    label: berbach.consent-banner.status.active
-    text: berbach.consent-banner.status.group.active.text
+    label: bb.consent-banner.status.active
+    text: bb.consent-banner.status.group.active.text
 
 columns:
   main:
@@ -26,13 +26,13 @@ columns:
         type: fields
         fields:
           group_description:
-            label: berbach.consent-banner.field.group_description
+            label: bb.consent-banner.field.group_description
             type: textarea
             buttons: false
             size: small
       components:
-        label: berbach.consent-banner.field.group_components
-        help: berbach.consent-banner.field.group_components.help
+        label: bb.consent-banner.field.group_components
+        help: bb.consent-banner.field.group_components.help
         type: pages
         templates: consent-banner-component
         status: all
@@ -45,11 +45,11 @@ columns:
         type: fields
         fields:
           group_essential:
-            label: berbach.consent-banner.field.group_essential
-            help: berbach.consent-banner.field.group_essential.help
+            label: bb.consent-banner.field.group_essential
+            help: bb.consent-banner.field.group_essential.help
             type: toggle
             default: false
             translate: false
             text:
-              - berbach.consent-banner.toggle.no
-              - berbach.consent-banner.toggle.yes
+              - bb.consent-banner.toggle.no
+              - bb.consent-banner.toggle.yes

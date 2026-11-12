@@ -32,7 +32,7 @@ Rollen ohne Zugriff bekommen ihn im Blueprint der Rolle entzogen:
 ```yaml
 # site/blueprints/users/editor.yml
 permissions:
-  berbach.consent-banner:
+  bb.consent-banner:
     access: false
 ```
 
@@ -211,7 +211,7 @@ Verzeichnis der Verarbeitungstätigkeiten und in die Datenschutzerklärung.
 
 ## 8. Optionen
 
-Alle in `site/config/config.php`, mit dem Präfix `berbach.consent-banner.`:
+Alle in `site/config/config.php`, mit dem Präfix `bb.consent-banner.`:
 
 | Option | Bedeutung | Vorgabe |
 | --- | --- | --- |
@@ -258,7 +258,7 @@ Sendet die Website eine CSP mit Nonce, bekommt das Plugin sie über die Option
 `nonce`:
 
 ```php
-'berbach.consent-banner.nonce' => fn () => MyCsp::nonce(),
+'bb.consent-banner.nonce' => fn () => MyCsp::nonce(),
 ```
 
 Die Inline-Scripts des Plugins und die Scripts vom Typ „Script laden“ tragen

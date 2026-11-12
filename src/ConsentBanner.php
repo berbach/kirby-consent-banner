@@ -23,9 +23,9 @@ use Kirby\Cms\Pages;
  */
 final class ConsentBanner
 {
-    public const PLUGIN = 'berbach/consent-banner';
-    public const OPTION = 'berbach.consent-banner.';
-    public const PERMISSION = 'berbach.consent-banner';
+    public const PLUGIN = 'bb/consent-banner';
+    public const OPTION = 'bb.consent-banner.';
+    public const PERMISSION = 'bb.consent-banner';
 
     /** Name of the consent cookie and of the localStorage entry */
     public const COOKIE_NAME = 'BbConsentPreferences';
@@ -341,7 +341,7 @@ final class ConsentBanner
 
     /**
      * A user may open the area and the log unless the role says otherwise:
-     * permissions: berbach.consent-banner: access: false
+     * permissions: bb.consent-banner: access: false
      */
     public function hasAccess(): bool
     {

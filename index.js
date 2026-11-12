@@ -6,7 +6,7 @@
  * brings the template compiler along.
  */
 (function () {
-  const PREFIX = 'berbach.consent-banner.';
+  const PREFIX = 'bb.consent-banner.';
 
   const translate = {
     methods: {
@@ -477,7 +477,7 @@
     `,
   };
 
-  window.panel.plugin('berbach/consent-banner', {
+  window.panel.plugin('bb/consent-banner', {
     components: {
       'k-consent-banner-view': BannerView,
       'k-consent-banner-consents-view': ConsentsView,

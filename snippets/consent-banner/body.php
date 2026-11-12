@@ -4,7 +4,7 @@
  *
  *   <?php snippet('consent-banner/body') ?>
  *
- * Only needed with the option berbach.consent-banner.inject set to false;
+ * Only needed with the option bb.consent-banner.inject set to false;
  * otherwise the plugin adds both to every page by itself.
  */
 echo consentBanner()->body();

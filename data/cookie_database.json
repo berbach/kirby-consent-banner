@@ -1250,7 +1250,7 @@
             ]
         },
         {
-            "service_name": "Consent Banner (Kirby-Plugin berbach/kirby-consent-banner)",
+            "service_name": "Consent Banner (Kirby-Plugin bb/kirby-consent-banner)",
             "service_identifier": "kirby-consent-banner",
             "service_provider": "",
             "service_aliases": [

@@ -34,7 +34,7 @@ final class KirbyTest extends TestCase
         $this->kirby = new App([
             'roots' => ['index' => $this->root],
             'urls' => ['index' => 'https://example.com'],
-            'options' => ['berbach.consent-banner.language' => 'de'],
+            'options' => ['bb.consent-banner.language' => 'de'],
         ]);
         $this->kirby->impersonate('kirby');
         $this->consentBanner = ConsentBanner::instance($this->kirby);
@@ -299,7 +299,7 @@ final class KirbyTest extends TestCase
         $this->kirby = new App([
             'roots' => ['index' => $this->root],
             'urls' => ['index' => 'https://example.com'],
-            'options' => ['berbach.consent-banner.language' => 'de'],
+            'options' => ['bb.consent-banner.language' => 'de'],
         ]);
         $this->kirby->impersonate('kirby');
         return $this->kirby;

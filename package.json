@@ -2,7 +2,7 @@
     "name": "kirby-consent-banner",
     "version": "1.0.0",
     "private": true,
-    "description": "Frontend assets of the Kirby plugin berbach/kirby-consent-banner",
+    "description": "Frontend assets of the Kirby plugin bb/kirby-consent-banner",
     "license": "GPL-2.0-or-later",
     "scripts": {
         "build": "node build.mjs",

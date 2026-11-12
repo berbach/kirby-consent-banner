@@ -1,7 +1,7 @@
 <?php
 
 /**
- * English texts. The keys get the prefix "berbach.consent-banner." in
+ * English texts. The keys get the prefix "bb.consent-banner." in
  * index.php. The first block is what a visitor reads, the rest is the panel.
  */
 return [
