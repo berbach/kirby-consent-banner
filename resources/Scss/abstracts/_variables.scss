@@ -1,0 +1,58 @@
+$prefix: 'bb-';
+
+$breakpoints: (
+    'small': 0,
+    'medium': 768px,
+    'large': 1024px,
+    'xlarge': 1200px,
+    'xxlarge': 1440px
+);
+
+$font-style-types: (
+
+);
+
+/* - Fonts Path - */
+$fontPath : '../Fonts/';
+
+/* - Theme Colors - */
+$white: #fff;
+$black: #000;
+
+/* - Cyan - */
+$darkCyan: #016882;
+$darkCyan70: #016782;
+$darkCyan60: #729BA9;
+$darkCyan50: #C2CFD0;
+$darkCyan20: #D0DDDD;
+$darkCyan10: #E9EEF2;
+
+/* - Gray - */
+$gray: #A7BABA;
+$gray95: #F2F2F2;
+$gray50: #D2DCDD;
+$gray35: #FBE6EF;
+$gray30: #E5EBEB;
+$darkGray: #444346;
+$darkGray80: #69696B;
+$lightGray: #DADADA;
+$blackGray: #1d1d1b;
+
+/* - Magenta - */
+$magenta: #D6075C;
+$magenta10: #FBE6EF;
+
+/* - Alumni - */
+$alumniColor: #C8AF73;
+
+/* - Lime - */
+$lightGreen: #B6E152;
+$darkGreen: #7DB64A;
+
+$dark: #414141;
+$lightGray: rgba(200, 210, 220, 0.6);
+$darkBlue: #00419b;
+$gold: #ca9912;
+
+$primaryDarker: #00419b;
+$secondary: #ca9912;

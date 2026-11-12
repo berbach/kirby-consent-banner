@@ -1,0 +1,894 @@
+@use "../abstracts/variables";
+@use "../abstracts/unit";
+
+@use "sass:math";
+@use "sass:map";
+@use "sass:list";
+@use "sass:selector";
+
+//$prefix: "bb-" !default;
+$white: #FFFFFF !default;
+$gray95: #F5F5F5 !default;
+$gray: #A7BABA !default;
+
+$container-gutter: (
+    small: 12px 12px,
+    medium: 20px 20px
+);
+$background-overlay: rgb(0, 0, 0, .3) !default;
+$background-full-width: #f0f0f0 !default;
+$container-max-width: unit.bb-calc-rem(1440) !default;
+$min-padding: 16px !default;
+$max-width: $container-max-width !default;
+
+.#{variables.$prefix}consentbanner {
+    $self: &;
+
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    position: fixed;
+    display: none;
+
+    @at-root .#{variables.$prefix}cb-overlay#{&} {
+        background: $background-overlay;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        height: 100vh;
+        @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    @at-root .#{variables.$prefix}cb-bottom#{&} {
+        background: $background-full-width;
+        align-items: flex-end;
+
+        max-height: min(100vh, 700px);
+        bottom: 0;
+        border-top: 8px solid variables.$secondary;
+    }
+
+    &.visible {
+        display: flex;
+    }
+
+    // Full-viewport backdrop, blocks the page while the banner is open.
+    &--page-disabled {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        z-index: 100;
+    }
+
+
+    &.#{variables.$prefix}cb-bottom {
+
+        #{$self}-groups {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: stretch;
+            margin-top: 15px;
+
+            @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: unit.bb-calc-rem(10) unit.bb-calc-rem(28);
+            }
+        }
+    }
+
+    .#{variables.$prefix}link--cookie-info {
+        height: unit.bb-calc-rem(40);
+    }
+
+    &-main {
+        margin-bottom: 0;
+        padding-inline: unit.bb-calc-rem(map.get($container-gutter, "small"));
+
+        @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+            padding-inline: unit.bb-calc-rem(map.get($container-gutter, "medium"));
+        }
+
+        .#{variables.$prefix}cb-bottom & {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: stretch;
+            max-width: $container-max-width;
+            margin: 0 auto;
+
+
+
+            @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "large"))) {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+
+
+        }
+
+        @at-root .#{variables.$prefix}cb-bottom#{&} {
+            background: blue;
+        }
+
+
+        #{$self}-content {
+            width: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: stretch;
+            .#{variables.$prefix}cb-bottom & {
+                @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "large"))) {
+                    width: 70%;
+                }
+            }
+
+        }
+
+        #{$self}-buttons {
+            width: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            margin-top: unit.bb-calc-rem(10);
+
+            .#{variables.$prefix}cb-bottom & {
+                @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                    flex-flow: row nowrap;
+                }
+                @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "large"))) {
+                    width: 30%;
+                    margin-top: 0;
+                    flex-flow: column nowrap;
+                    align-items: flex-end;
+                }
+            }
+
+            .#{variables.$prefix}cb-overlay & {
+                @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                    flex-flow: row nowrap;
+                    gap: unit.bb-calc-rem(10);
+                }
+            }
+
+        }
+    }
+
+    &-header{
+        #{$self}--title {
+            font-weight: 700;
+            font-size: clamp(#{unit.bb-calc-rem(20)}, 0.00rem + 5.00vw, #{unit.bb-calc-rem(24)});
+            margin-bottom: unit.bb-calc-rem(6);
+
+        }
+        #{$self}--description {
+            font-size: unit.bb-calc-rem(16);
+            margin-bottom: unit.bb-calc-rem(2);
+        }
+    }
+
+    &-buttons{
+        > .#{variables.$prefix}button {
+            cursor: pointer;
+            margin-bottom: unit.bb-calc-rem(9);
+            .#{variables.$prefix}cb-bottom & {
+                @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                    margin-bottom: 0;
+                }
+                @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "large"))) {
+                    //flex-flow: column nowrap;
+                    margin-bottom: unit.bb-calc-rem(9);
+                    width: 75%;
+
+                    .#{variables.$prefix}cb-bottom & {
+                    }
+                }
+            }
+
+            .#{variables.$prefix}cb-overlay & {
+                @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                    flex: 1;
+                    margin-bottom: 0;
+                }
+                @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "large"))) {
+                    //flex-flow: column nowrap;
+
+
+                }
+            }
+
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+    }
+
+    &-footer {
+        padding-top: unit.bb-calc-rem(20);
+        @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+            padding-top: unit.bb-calc-rem(30);
+        }
+
+        &-row{
+            display: flex;
+            flex-flow: row wrap;
+
+            padding-inline: unit.bb-calc-rem(map.get($container-gutter, "small"));
+
+            @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                padding-inline: unit.bb-calc-rem(map.get($container-gutter, "medium"));
+            }
+
+            max-width: $container-max-width;
+            margin: 0 auto;
+        }
+
+        &-cell{
+
+            @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                flex: 0 0 50%;
+                width: 50%;
+            }
+        }
+
+        #{$self}-uid {
+            flex: 0 0 100%;
+            width: 100%;
+            text-align: right;
+            font-size: unit.bb-calc-rem(14);
+            border-top: 1px solid variables.$darkGray;
+            margin-top: unit.bb-calc-rem(10);
+            padding-top: unit.bb-calc-rem(5);
+        }
+
+        #{$self}-links {
+            display: flex;
+            justify-content: flex-end;
+
+            // No fixed height on smartphones; only from tablet portrait up.
+            @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                height: unit.bb-calc-rem(40);
+            }
+
+            #{$self}--link {
+                flex: 1 0 auto;
+
+                border: 0;
+                display: inline-block;
+                padding: unit.bb-calc-rem(10.5 10 10.5 10);
+                position: relative;
+
+                // From tablet portrait up the links keep their natural width and
+                // sit flush right (no growing/spreading across the cell).
+                @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                    flex: 0 0 auto;
+                }
+
+
+                &:after {
+                    content: "";
+                    background-color: variables.$darkBlue;
+                    width: 2px;
+                    position: absolute;
+                    top: unit.bb-calc-rem(12.5);
+                    bottom: unit.bb-calc-rem(10.5);
+                    right: -1px;
+                    opacity: .7;
+                }
+
+                &:last-child {
+                    //padding-right: bb-calc-rem(5);
+
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .#{variables.$prefix}button,
+    .#{variables.$prefix}consentbanner--link{
+        font-size: unit.bb-calc-rem(16);
+        line-height: 1.5;
+    }
+
+    &-groups{
+
+
+    }
+
+    &.#{variables.$prefix}cb-bottom {
+        #{$self}-group {
+            #{$self}-description {
+                display: none;
+            }
+        }
+        .#{variables.$prefix}show-overlay,
+        #{$self}-components {
+            display: none;
+        }
+    }
+
+    &.#{variables.$prefix}cb-overlay {
+        .#{variables.$prefix}show-bottom
+        {
+            display: none;
+        }
+    }
+
+    // Advanced settings of the compact overlay: only "save & close" and "accept all".
+    &.#{variables.$prefix}cb-overlay:not(.#{variables.$prefix}cb-compact) {
+        .#{variables.$prefix}btn--reject {
+            display: none;
+        }
+    }
+
+    // Compact overlay: only text and buttons until "advanced settings" expands it.
+    &.#{variables.$prefix}cb-compact {
+        #{$self}-preferences,
+        .#{variables.$prefix}show-overlay {
+            display: none;
+        }
+
+        .#{variables.$prefix}show-compact {
+            display: block;
+        }
+    }
+    //&-components{
+    //    &-hidden{
+    //        display: none;
+    //    }
+    //
+    //    #{$self}-component {
+    //
+    //    }
+    //}
+
+    //#{$self}-body {
+    //    display: flex;
+    //    flex-direction: column;
+    //    flex-wrap: nowrap;
+    //    align-items: stretch;
+    //
+    //
+    //
+    //
+    //}
+
+    &-body {
+        position: relative;
+        z-index: 102;
+        flex: 1;
+        padding-block: unit.bb-calc-rem(20 12);
+
+        @media screen and (max-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+            padding-block: unit.bb-calc-rem(30 20);
+        }
+
+        //.#{variables.$prefix}cb-bottom & {
+        //    display: flex;
+        //    flex-direction: column;
+        //    flex-wrap: nowrap;
+        //    align-items: stretch;
+        //    justify-content: flex-start;
+        //    align-content: center;
+        //
+        //
+        //
+        //}
+
+        .#{variables.$prefix}cb-overlay & {
+            max-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"));
+            background: $white;
+
+            margin: 0 auto;
+            // Keep the overlay box within the viewport and scroll its content
+            // (Advanced settings / Cookie settings can be taller than the screen).
+            max-height: calc(100vh - #{unit.bb-calc-rem(40)});
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior: contain;
+
+            @media screen and (max-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                max-height: 100vh;
+                padding-top: unit.bb-calc-rem(45);
+            }
+        }
+
+        #{$self}-header {
+            //width: 100%;
+
+            .#{variables.$prefix}cb-bottom & {
+                #{$self}-close {
+                    display: none !important;
+                }
+            }
+        }
+
+        #{$self}-coeentent {
+            width: 100%;
+
+            .#{variables.$prefix}cb-bottom & {
+                position: relative;
+                align-items: stretch;
+                align-content: stretch;
+                justify-content: flex-start;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                padding-bottom: unit.bb-calc-rem(15);
+
+                &.is-categories {
+                    padding-bottom: unit.bb-calc-rem(15);
+                    @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                        padding-bottom: unit.bb-calc-rem(50);
+                        margin-bottom: 15px;
+                    }
+                    @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "large"))) {
+                        margin-bottom: 0;
+                    }
+                }
+
+                @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "large"))) {
+                    width: 70%;
+                }
+
+                #{$self}-categories {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    align-items: stretch;
+                    margin-top: 15px;
+
+                    @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        position: absolute;
+                        height: unit.bb-calc-rem(45);
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                    }
+                }
+
+                #{$self}-category {
+                    border: none;
+                    padding: 0;
+
+                    &--modules,
+                    #{$self}-description {
+                        display: none;
+                    }
+                }
+            }
+
+            #{$self}-category {
+                &-modules {
+                    &.hidden {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        #{$self}-footer-old {
+            width: 100%;
+
+            #{$self}-buttons {
+                display: flex;
+
+                > .#{variables.$prefix}button {
+                    cursor: pointer;
+
+                    &.hidden {
+                        display: none !important;
+                    }
+                }
+            }
+
+            .#{variables.$prefix}cb-bottom & {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: space-between;
+
+                @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "large"))) {
+                    width: 30%;
+
+                }
+
+                #{$self}-buttons {
+                    width: 100%;
+                    flex-direction: column;
+
+                    @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                        width: 100%;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                    }
+
+                    @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "large"))) {
+                        width: 75%;
+                        flex-direction: column;
+                        align-items: stretch;
+                        flex-wrap: nowrap;
+                    }
+                }
+
+                #{$self}-links {
+                    height: unit.bb-calc-rem(45);
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+
+                    #{$self}--link {
+                        flex: 1 0 auto;
+                        font-size: unit.bb-calc-rem(16);
+                        line-height: 1.5;
+                        border: 0;
+                        display: inline-block;
+                        padding: unit.bb-calc-rem(10.5 10 10.5 10);
+                        position: relative;
+
+                        @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "large"))) {
+                            flex: 0 0 auto;
+                        }
+
+                        //&:first-child {
+                        //  padding-left: bb-calc-rem(5);
+                        //}
+
+                        &:after {
+                            content: "";
+                            background-color: variables.$darkBlue;
+                            width: 2px;
+                            position: absolute;
+                            top: unit.bb-calc-rem(12.5);
+                            bottom: unit.bb-calc-rem(10.5);
+                            right: -1px;
+                            opacity: .7;
+                        }
+
+                        &:last-child {
+                            //padding-right: bb-calc-rem(5);
+
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .#{variables.$prefix}cb-overlay & {
+                padding-top: unit.bb-calc-rem(8);
+
+                #{$self}-buttons {
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                        flex-direction: row;
+                        &.is-categories,
+                        &.not-categories {
+                            flex-direction: row-reverse;
+
+                            .#{variables.$prefix}button {
+                                @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                                    margin-right: 9px;
+                                    margin-left: 0;
+                                    margin-bottom: 0;
+                                    &:first-child {
+                                        margin-right: 0;
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+
+                    .#{variables.$prefix}button {
+                        flex: 1;
+                        width: 100%;
+                        @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                            width: auto;
+                        }
+                    }
+                }
+
+                #{$self}-links {
+                    $small-paddings-index: 1;
+                    $medium-paddings-index: 1;
+                    @if list.length(map.get($container-gutter, "small")) > 2 {
+                        $small-paddings-index: 3;
+                    }
+                    @if list.length(map.get($container-gutter, "medium")) > 2 {
+                        $medium-paddings-index: 3;
+                    }
+
+                    $visual-center-ratio: .8;
+                    text-align: center;
+                    margin-top: unit.bb-calc-rem(list.nth(map.get($container-gutter, "small"), $small-paddings-index)) * $visual-center-ratio;
+
+                    @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                        margin-top: unit.bb-calc-rem(list.nth(map.get($container-gutter, "medium"), $medium-paddings-index)) * $visual-center-ratio;
+                    }
+                }
+            }
+        }
+    }
+
+    &-header {
+        #{$self}-close {
+            position: absolute;
+            right: 0;
+            top: unit.bb-calc-rem(10);
+
+            margin: 0;
+            padding: 0;
+
+            $size: 40px;
+
+            height: unit.bb-calc-rem($size);
+            width: unit.bb-calc-rem($size);
+
+            appearance: none;
+            background: none;
+            border: none;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            cursor: pointer;
+
+            $icon-height: $size * .5;
+
+            &:before, &:after {
+                content: '';
+                display: block;
+                position: absolute;
+
+                width: 1px;
+                height: $icon-height;
+
+                background: variables.$darkBlue;
+
+                transform: rotate(45deg);
+
+            }
+
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+
+        #{$self}--heading {
+            font-weight: bold;
+
+            .#{variables.$prefix}cb-bottom & {
+                text-align: left;
+            }
+
+            .#{variables.$prefix}cb-overlay & {
+                text-align: center;
+            }
+
+            margin-bottom: unit.bb-calc-rem(6);
+        }
+    }
+
+    &-content {
+        #{$self}--text {
+            margin-bottom: unit.bb-calc-rem(2);
+        }
+
+        #{$self}--link {
+            text-decoration: underline;
+            color: variables.$darkBlue;
+
+            cursor: pointer;
+
+            &:hover {
+                color: variables.$secondary;
+            }
+        }
+    }
+
+    &-footer {
+        position: relative;
+    }
+
+    &-footer #{$self}-buttons {
+
+
+        .#{variables.$prefix}button {
+            outline: none;
+            padding: 0.625rem;
+            border: 0.125rem solid transparent;
+            display: inline-block;
+            font-size: unit.bb-calc-rem(16);
+
+            &.#{variables.$prefix}btn {
+                &--typeP {
+                    margin: 0;
+
+                    background: variables.$darkBlue;
+                    color: $white;
+                }
+
+                &--typeS {
+                    margin: 0;
+
+                    background: transparent;
+                    color: variables.$darkBlue;
+                    border-color: variables.$secondary;
+                }
+
+                &--typeS, &--typeP {
+                    &:hover {
+                        border-color: variables.$secondary;
+                        background: variables.$secondary;
+                        color: $white;
+                    }
+                }
+            }
+
+            .#{variables.$prefix}cb-overlay & {
+                margin-bottom: 9px;
+                @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                    margin-right: 9px;
+                    margin-bottom: 0;
+                }
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+
+            .#{variables.$prefix}cb-bottom & {
+                margin-bottom: 9px;
+                @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                    margin-bottom: 0;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    flex: 1 0 auto;
+                }
+
+                @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "large"))) {
+                    margin-bottom: 9px;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+
+                &:first-child {
+                    margin-bottom: 9px;
+                    @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                        margin-bottom: 0;
+                        margin-left: 0;
+                    }
+                    @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "large"))) {
+                        margin-bottom: 9px;
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                    @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    &-button{
+
+        &.#{variables.$prefix}icon-widget {
+            position: fixed;
+            left: 12px;
+            bottom: 12px;
+
+            width: 50px;
+            height: 50px;
+
+            border-radius: 50%;
+
+            background: url('../Image/checkbox.svg') no-repeat center, variables.$secondary;
+            background-size: 18px;
+            box-shadow: 0 1px 8px rgba(0, 0, 0, .1);
+
+            cursor: pointer;
+
+            z-index: 50;
+
+            &.hidden {
+                display: none;
+            }
+        }
+    }
+    &-link{
+        &.#{variables.$prefix}text-widget {
+            background-color: inherit;
+            font-size: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+            cursor: pointer;
+            color: inherit;
+            border: 0;
+        }
+    }
+
+    .hidden {
+        display: none !important;
+    }
+}
+
+@mixin unify-parent($child) {
+    @at-root #{selector.unify(&, $child)} {
+        @content;
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+// Overlay (Advanced / Cookie settings) refinements
+//  - sticky header (with the X close button) pinned to the top
+//  - the body scrolls (see &-body rule above); preferences + footer scroll under
+//  - footer navigation links are hidden while the settings dialog is open
+//    (the compact overlay shows them until it expands to the settings)
+// -----------------------------------------------------------------------------
+.#{variables.$prefix}cb-overlay {
+    // let the sticky header sit flush at the top of the scroll box
+    .#{variables.$prefix}consentbanner-body {
+        padding-top: 0;
+
+        @media screen and (max-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+            padding-top: 0;
+        }
+    }
+
+    .#{variables.$prefix}consentbanner-header {
+        position: sticky;
+        top: 0;
+        z-index: 3;
+        background: $white;
+        padding: unit.bb-calc-rem(16) unit.bb-calc-rem(40) unit.bb-calc-rem(10) 0;
+        border-bottom: unit.bb-calc-rem(1) solid $gray95;
+    }
+
+    &:not(.#{variables.$prefix}cb-compact) .#{variables.$prefix}consentbanner-footer-cell--links {
+        display: none;
+    }
+}
+
+// Overlay buttons stay on one line
+.#{variables.$prefix}consentbanner.#{variables.$prefix}cb-overlay .#{variables.$prefix}consentbanner-buttons .#{variables.$prefix}button {
+    white-space: nowrap;
+}
+
+// Sperrt das Scrollen der Seite, solange der Consent Banner offen/aktiv ist.
+html.#{variables.$prefix}consentbanner--page-locked {
+    overflow: hidden;
+
+    body {
+        overflow: hidden;
+    }
+}

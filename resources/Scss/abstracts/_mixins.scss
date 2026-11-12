@@ -1,0 +1,138 @@
+@use "sass:map";
+@use "sass:meta";
+@use "sass:string";
+@use "breakpoint";
+@use "unit";
+@use "variables";
+
+@mixin bb-font-style-by-type($style-type: null) {
+  @if map.has-key(variables.$font-style-types, $style-type) {
+
+    @each $size,
+    $font-defs in map.get(variables.$font-style-types, $style-type) {
+
+      @include breakpoint.bb-mq-up($size) {
+
+        @each $name,
+        $value in $font-defs {
+
+          @if $name==font-weight or $name==font-style {
+            #{$name}: $value;
+          }
+
+          @else if $name==line-height {
+            #{$name}: unit.bb-calc-rem($value);
+          }
+
+          @else if meta.type-of($name)=='string' {
+
+            @if meta.type-of($value) !='number' {
+              #{$name}: $value;
+            }
+
+            @else if meta.type-of($value)=='number' {
+              #{$name}: unit.bb-calc-rem($value);
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+    @content;
+
+  }
+
+  @else {
+    @warn 'font style type '+$style-type+' not exist.'
+  }
+}
+
+@mixin bb-text-align($position: 'left') {
+  text-align: string.unquote($position);
+}
+
+@mixin logo-mixin($logo: false) {
+  @if $logo==mobile {
+    background-image: url('#{$logoPath}#{$logoMobileName}');
+  }
+
+  @else if $logo==sticky {
+    background-image: url('#{$logoPath}#{$logoStickyName}');
+  }
+
+  @else if $logo==sponsor {
+    background-image: url('#{$logoPath}#{$logoSponsor}');
+  }
+
+  @else {
+    background-image: url('#{$logoPath}#{$logoName}');
+  }
+}
+
+
+@mixin bb-flex-default($gutter: 20px, $gap: 20px, $justify: false, $align: false) {
+  $gutter: $gutter*0.5;
+  display: flex;
+  flex-wrap: wrap;
+
+  @if $gutter !=0 {
+    margin-left: -$gutter;
+    margin-right: -$gutter;
+
+    >* {
+      padding-left: $gutter;
+      padding-right: $gutter;
+    }
+
+  }
+
+
+  @if $justify {
+    justify-content: $justify;
+  }
+
+  @if $align {
+    align-content: $align;
+  }
+
+
+}
+
+@mixin bb-bgStyle($bgColor: transparent, $imageFile: false, $unifyParentClass: false) {
+
+  @if $unifyParentClass !=false {
+    &#{$unifyParentClass} {
+      @if $imageFile !=false {
+        background-color: $bgColor;
+        background-image: url('../Image/Background/#{$imageFile}');
+        background-position: top left;
+        background-repeat: repeat;
+      }
+
+      @else {
+        background-color: $bgColor;
+      }
+
+      @content;
+    }
+  }
+
+  @else {
+    @if $imageFile !=false {
+      background-color: $bgColor;
+      background-image: url('../Image/Background/#{$imageFile}');
+      background-position: top left;
+      background-repeat: repeat;
+    }
+
+    @else if $bgColor !=transparent {
+      background-color: $bgColor;
+    }
+
+    @content;
+  }
+
+}

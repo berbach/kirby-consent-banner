@@ -1,0 +1,57 @@
+@use "../abstracts/variables";
+
+@use 'sass:math';
+
+.#{variables.$prefix}consentbanner-placeholder {
+  position: relative;
+  width: 100%;
+  $border-thickness: 3px;
+  border: $border-thickness dashed variables.$secondary;
+
+  &.#{variables.$prefix}media--wrapper.#{variables.$prefix}type--movie {
+    align-items: stretch;
+  }
+
+  .#{variables.$prefix}aspect-16-9 & {
+    padding-top: calc(#{math.div(9, 16) * 100%} - #{$border-thickness * 2});
+  }
+
+  .#{variables.$prefix}consentbanner-placeholder-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    padding: 0 2em;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .#{variables.$prefix}consentbanner-placeholder-text {
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  .#{variables.$prefix}consentbanner-component {
+    padding: 0 calc((100% - 14em) / 2);
+
+    .#{variables.$prefix}control-checkbox {
+      font-weight: bold;
+      padding: .5em 1.5em;
+      //background: $gray95;
+    }
+  }
+
+  &-variable-height {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    .#{variables.$prefix}consentbanner-placeholder-wrapper {
+      position: relative;
+    }
+  }
+}

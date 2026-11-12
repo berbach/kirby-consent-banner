@@ -1,0 +1,21 @@
+{
+    "name": "kirby-consent-banner",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Frontend assets of the Kirby plugin berbach/kirby-consent-banner",
+    "license": "GPL-2.0-or-later",
+    "scripts": {
+        "build": "node build.mjs",
+        "build:dev": "node build.mjs --dev"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.20",
+        "esbuild": "^0.25.0",
+        "postcss": "^8.4.31",
+        "sass": "^1.93.3"
+    },
+    "browserslist": [
+        "> 0.5%",
+        "last 2 versions"
+    ]
+}

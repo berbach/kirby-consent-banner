@@ -1,0 +1,117 @@
+@use "../abstracts/variables";
+
+// Default look of buttons, links and the button widget. The banner comes
+// without a site theme around it, so it has to look right by itself. A site
+// changes it with the custom properties below or switches the stylesheet off
+// (option berbach.consent-banner.css) and brings its own.
+//
+//   :root {
+//     --bb-cb-accent: #016882;
+//     --bb-cb-accent-contrast: #fff;
+//     --bb-cb-radius: 4px;
+//   }
+
+$accent: var(--bb-cb-accent, #{variables.$blackGray});
+$accent-contrast: var(--bb-cb-accent-contrast, #{variables.$white});
+$radius: var(--bb-cb-radius, 4px);
+
+.#{variables.$prefix}consentbanner {
+    .#{variables.$prefix}button,
+    .#{variables.$prefix}cookie-info-close {
+        appearance: none;
+        margin: 0;
+        padding: .7em 1.2em;
+        border: 1px solid $accent;
+        border-radius: $radius;
+        background: variables.$white;
+        color: $accent;
+        font: inherit;
+        font-weight: 600;
+        line-height: 1.2;
+        cursor: pointer;
+        transition: background-color .15s, color .15s;
+
+        &:hover {
+            background: $accent;
+            color: $accent-contrast;
+        }
+
+        // Accepting and declining weigh the same
+        &.#{variables.$prefix}show-all,
+        &.#{variables.$prefix}btn--reject {
+            background: $accent;
+            color: $accent-contrast;
+
+            &:hover {
+                opacity: .85;
+            }
+        }
+    }
+
+    button.#{variables.$prefix}consentbanner--link,
+    a.#{variables.$prefix}consentbanner--link {
+        appearance: none;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: none;
+        color: $accent;
+        font: inherit;
+        text-decoration: underline;
+        text-underline-offset: .15em;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration-thickness: 2px;
+        }
+    }
+
+    .#{variables.$prefix}button:focus-visible,
+    .#{variables.$prefix}consentbanner--link:focus-visible,
+    .#{variables.$prefix}consentbanner-close:focus-visible {
+        outline: 2px solid $accent;
+        outline-offset: 2px;
+    }
+}
+
+// Reopens the settings, fixed at the bottom of the viewport
+.#{variables.$prefix}button-widget {
+    position: fixed;
+    z-index: 50;
+    bottom: 12px;
+    left: 12px;
+    appearance: none;
+    margin: 0;
+    padding: .7em 1.1em;
+    border: 0;
+    border-radius: 999px;
+    background: $accent;
+    color: $accent-contrast;
+    font: 600 .8125rem/1.2 system-ui, -apple-system, "Segoe UI", sans-serif;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, .25);
+    cursor: pointer;
+
+    &-right {
+        right: 12px;
+        left: auto;
+    }
+
+    &:hover {
+        opacity: .85;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $accent;
+        outline-offset: 2px;
+    }
+
+    @media print {
+        display: none;
+    }
+}
+
+.#{variables.$prefix}consentbanner-placeholder-headline {
+    margin: 0 0 .75em;
+    font-size: 1.125em;
+    line-height: 1.3;
+}

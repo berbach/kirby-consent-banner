@@ -1,0 +1,55 @@
+{
+  "name": "berbach/kirby-consent-banner",
+  "description": "Consent banner for Kirby with Google Consent Mode v2, Matomo and script control, consent log (SQLite), cookie information and placeholders for embedded content",
+  "type": "kirby-plugin",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "kirby",
+    "kirby-plugin",
+    "consent",
+    "cookie-banner",
+    "consent-mode",
+    "gdpr",
+    "dsgvo"
+  ],
+  "homepage": "https://github.com/berbach/kirby-consent-banner",
+  "authors": [
+    {
+      "name": "berbach GmbH",
+      "homepage": "https://berbach.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.2",
+    "ext-json": "*",
+    "ext-pdo_sqlite": "*",
+    "getkirby/composer-installer": "^1.2"
+  },
+  "require-dev": {
+    "getkirby/cms": "^5.0",
+    "phpunit/phpunit": "^11.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Berbach\\ConsentBanner\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Berbach\\ConsentBanner\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "installer-name": "consent-banner",
+    "kirby-cms-path": false
+  },
+  "config": {
+    "allow-plugins": {
+      "getkirby/composer-installer": true
+    },
+    "optimize-autoloader": true
+  },
+  "scripts": {
+    "test": "phpunit"
+  }
+}

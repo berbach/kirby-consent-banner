@@ -1,0 +1,11 @@
+# Not part of the archive Composer installs (--prefer-dist): sources of the
+# frontend assets, tests and build files. assets/dist is what runs.
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/.github export-ignore
+/build.mjs export-ignore
+/package.json export-ignore
+/package-lock.json export-ignore
+/phpunit.xml.dist export-ignore
+/resources export-ignore
+/tests export-ignore

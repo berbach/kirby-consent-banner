@@ -1,0 +1,1545 @@
+{
+    "services": [
+        {
+            "service_name": "YouTube",
+            "service_identifier": "youtube",
+            "service_provider": ".youtube.com,.youtube-nocookie.com",
+            "service_aliases": [
+                "youtube",
+                "yt",
+                "youtube video",
+                "youtube embed",
+                "youtube-nocookie"
+            ],
+            "is_third_party": true,
+            "service_privacy_link": "https://policies.google.com/privacy",
+            "service_publisher": "Google Ireland Ltd.",
+            "service_data_collected": {
+                "de": "IP-Adresse; Geräteinformationen; Referrer-URL; angesehene Videos; Interaktionen mit dem Videoplayer",
+                "en": "IP address; device information; referrer URL; videos viewed; video player interactions"
+            },
+            "cookies": [
+                {
+                    "name": "PREF",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "8 Monate",
+                        "en": "8 months"
+                    },
+                    "purpose": {
+                        "de": "Wiedergabeeinstellungen",
+                        "en": "Playback preferences"
+                    },
+                    "description": {
+                        "de": "Speichert bevorzugte Seiteneinstellungen und Wiedergabepräferenzen wie Autoplay, Zufallswiedergabe und Playergröße. Erst gesetzt, wenn das Video abgespielt wird.",
+                        "en": "Stores preferred page settings and playback preferences such as autoplay, shuffle and player size. Only set once the video is played."
+                    }
+                },
+                {
+                    "name": "VISITOR_INFO1_LIVE",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "8 Monate",
+                        "en": "8 months"
+                    },
+                    "purpose": {
+                        "de": "Personalisierung / Bandbreitenschätzung",
+                        "en": "Personalization / bandwidth estimation"
+                    },
+                    "description": {
+                        "de": "Schätzt die Bandbreite des Nutzers für passende Videoqualität und unterstützt personalisierte Empfehlungen basierend auf früheren Aufrufen. Erst gesetzt, wenn das Video abgespielt wird.",
+                        "en": "Estimates the user's bandwidth for appropriate video quality and supports personalized recommendations based on past views. Only set once the video is played."
+                    }
+                },
+                {
+                    "name": "YSC",
+                    "type": "Session-Cookie",
+                    "lifetime": {
+                        "de": "Sitzung",
+                        "en": "Session"
+                    },
+                    "purpose": {
+                        "de": "Statistik",
+                        "en": "Statistics"
+                    },
+                    "description": {
+                        "de": "Speichert eine eindeutige Sitzungs-ID, um Videoaufrufe und Interaktionen mit eingebetteten Videos zu erfassen. Erst gesetzt, wenn das Video abgespielt wird.",
+                        "en": "Stores a unique session ID to track video views and interactions with embedded videos. Only set once the video is played."
+                    }
+                },
+                {
+                    "name": "CONSENT",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "20 Jahre",
+                        "en": "20 years"
+                    },
+                    "purpose": {
+                        "de": "Einwilligungsverwaltung",
+                        "en": "Consent management"
+                    },
+                    "description": {
+                        "de": "Speichert, ob und welche Cookie-/Datenschutzeinwilligung der Nutzer gegenüber Google erteilt hat.",
+                        "en": "Stores whether and which cookie/privacy consent the user has given to Google."
+                    }
+                },
+                {
+                    "name": "yt-player-bandwidth",
+                    "type": "LocalStorage",
+                    "lifetime": {
+                        "de": "1 Monat",
+                        "en": "1 month"
+                    },
+                    "purpose": {
+                        "de": "Videowiedergabe",
+                        "en": "Video playback"
+                    },
+                    "description": {
+                        "de": "Kein klassisches Cookie, sondern ein HTML5-LocalStorage-Eintrag. Ermittelt eine Bandbreitenschätzung für die optimale Videoqualität. Kann bereits beim Laden des iframes gesetzt werden - auch im 'privacy-enhanced'/no-cookie-Modus.",
+                        "en": "Not a classic cookie but an HTML5 localStorage entry. Determines a bandwidth estimate for the optimal video quality. Can already be set when the iframe loads - even in 'privacy-enhanced' / no-cookie mode."
+                    }
+                },
+                {
+                    "name": "yt-remote-device-id",
+                    "type": "LocalStorage",
+                    "lifetime": {
+                        "de": "dauerhaft (kein Ablaufdatum)",
+                        "en": "persistent (no expiration date)"
+                    },
+                    "purpose": {
+                        "de": "Videowiedergabe",
+                        "en": "Video playback"
+                    },
+                    "description": {
+                        "de": "Kein Cookie, sondern ein LocalStorage-Eintrag. Speichert Player-Einstellungen und dient u.a. der Kopplung mit Fernbedienungen/Cast-Geräten. Wird spätestens beim Abspielen gesetzt.",
+                        "en": "Not a cookie but a localStorage entry. Stores player settings and supports pairing with remote/cast devices. Set at the latest when playback starts."
+                    }
+                },
+                {
+                    "name": "ytidb::LAST_RESULT_ENTRY_KEY",
+                    "type": "LocalStorage",
+                    "lifetime": {
+                        "de": "dauerhaft (kein Ablaufdatum)",
+                        "en": "persistent (no expiration date)"
+                    },
+                    "purpose": {
+                        "de": "Suchergebnisse",
+                        "en": "Search results"
+                    },
+                    "description": {
+                        "de": "Kein Cookie, sondern ein LocalStorage-Eintrag (teils zusammen mit einer IndexedDB namens 'YtIdbMeta'). Kann bereits beim reinen Laden des iframes geschrieben werden, auch ohne Interaktion.",
+                        "en": "Not a cookie but a localStorage entry (sometimes alongside an IndexedDB called 'YtIdbMeta'). Can already be written on mere iframe load, even without interaction."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "Google Analytics (GA4)",
+            "service_identifier": "google-analytics",
+            "service_provider": ".google-analytics.com,.analytics.google.com",
+            "service_aliases": [
+                "google analytics",
+                "ga4",
+                "ga",
+                "universal analytics",
+                "analytics"
+            ],
+            "is_third_party": true,
+            "service_privacy_link": "https://policies.google.com/privacy",
+            "service_publisher": "Google Ireland Ltd.",
+            "service_data_collected": {
+                "de": "IP-Adresse (gekürzt); Geräte- und Browserinformationen; besuchte Seiten; Verweildauer; Interaktionen; Client-/Sitzungs-ID",
+                "en": "IP address (truncated); device and browser information; pages visited; time on page; interactions; client/session ID"
+            },
+            "cookies": [
+                {
+                    "name": "_ga",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "2 Jahre (praktisch oft ca. 13 Monate durch Browser-Limits)",
+                        "en": "2 years (in practice often around 13 months due to browser limits)"
+                    },
+                    "purpose": {
+                        "de": "Statistik",
+                        "en": "Statistics"
+                    },
+                    "description": {
+                        "de": "Speichert eine eindeutige Client-ID, um Nutzer über mehrere Sitzungen hinweg wiederzuerkennen.",
+                        "en": "Stores a unique client ID to distinguish users across sessions."
+                    }
+                },
+                {
+                    "name": "_ga_<container-id>",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "2 Jahre",
+                        "en": "2 years"
+                    },
+                    "purpose": {
+                        "de": "Statistik",
+                        "en": "Statistics"
+                    },
+                    "description": {
+                        "de": "Speichert Sitzungs- und Ereignisdaten für eine bestimmte GA4-Property (Datenstream).",
+                        "en": "Stores session and event data for a specific GA4 property (data stream)."
+                    }
+                },
+                {
+                    "name": "_gid",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "24 Stunden",
+                        "en": "24 hours"
+                    },
+                    "purpose": {
+                        "de": "Statistik",
+                        "en": "Statistics"
+                    },
+                    "description": {
+                        "de": "Unterscheidet Nutzer auf Tagesbasis, u.a. für Sitzungs- und Engagement-Auswertungen.",
+                        "en": "Distinguishes users on a daily basis, e.g. for session and engagement analysis."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "Google Ads (Conversion-Tracking)",
+            "service_identifier": "google-ads",
+            "service_provider": ".googleadservices.com,.doubleclick.net,.google.com",
+            "service_aliases": [
+                "google ads",
+                "adwords",
+                "google adwords",
+                "conversion tracking",
+                "doubleclick"
+            ],
+            "is_third_party": true,
+            "service_privacy_link": "https://policies.google.com/privacy",
+            "service_publisher": "Google Ireland Ltd.",
+            "service_data_collected": {
+                "de": "Klick-ID (gclid); IP-Adresse; besuchte Seite nach Anzeigenklick; Conversion-Ereignisse",
+                "en": "Click ID (gclid); IP address; page visited after ad click; conversion events"
+            },
+            "cookies": [
+                {
+                    "name": "_gcl_au",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "90 Tage",
+                        "en": "90 days"
+                    },
+                    "purpose": {
+                        "de": "Marketing / Conversion-Tracking",
+                        "en": "Marketing / conversion tracking"
+                    },
+                    "description": {
+                        "de": "Speichert und verfolgt Conversions, um die Wirksamkeit von Google-Ads-Kampagnen zu messen.",
+                        "en": "Stores and tracks conversions to measure the effectiveness of Google Ads campaigns."
+                    }
+                },
+                {
+                    "name": "_gcl_aw",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "90 Tage",
+                        "en": "90 days"
+                    },
+                    "purpose": {
+                        "de": "Marketing / Conversion-Tracking",
+                        "en": "Marketing / conversion tracking"
+                    },
+                    "description": {
+                        "de": "Speichert die Klick-ID (gclid) eines Anzeigenklicks, um spätere Conversions dem Klick zuzuordnen.",
+                        "en": "Stores the click ID (gclid) of an ad click to attribute later conversions to that click."
+                    }
+                },
+                {
+                    "name": "IDE",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "13 Monate (EWR/CH/UK) bzw. 24 Monate (weltweit)",
+                        "en": "13 months (EEA/CH/UK) or 24 months (worldwide)"
+                    },
+                    "purpose": {
+                        "de": "Marketing / Retargeting",
+                        "en": "Marketing / retargeting"
+                    },
+                    "description": {
+                        "de": "Wird von Google DoubleClick gesetzt, um Nutzern zielgerichtete Werbung auszuliefern und die Anzeigenwirksamkeit zu messen.",
+                        "en": "Set by Google DoubleClick to serve targeted ads to users and measure ad effectiveness."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "Google Maps",
+            "service_identifier": "google-maps",
+            "service_provider": ".google.com,.maps.google.com,.gstatic.com",
+            "service_aliases": [
+                "google maps",
+                "maps",
+                "gmaps"
+            ],
+            "is_third_party": true,
+            "service_privacy_link": "https://policies.google.com/privacy",
+            "service_publisher": "Google Ireland Ltd.",
+            "service_data_collected": {
+                "de": "IP-Adresse; Standortanfragen; Interaktionen mit der Karte",
+                "en": "IP address; location requests; map interactions"
+            },
+            "cookies": [
+                {
+                    "name": "NID",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "6 Monate",
+                        "en": "6 months"
+                    },
+                    "purpose": {
+                        "de": "Einstellungen / Personalisierung",
+                        "en": "Preferences / personalization"
+                    },
+                    "description": {
+                        "de": "Speichert Nutzereinstellungen wie bevorzugte Sprache, um Google-Dienste inkl. Maps zu personalisieren.",
+                        "en": "Stores user preferences such as preferred language to personalize Google services including Maps."
+                    }
+                },
+                {
+                    "name": "SIDCC",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "1 Jahr",
+                        "en": "1 year"
+                    },
+                    "purpose": {
+                        "de": "Sicherheit",
+                        "en": "Security"
+                    },
+                    "description": {
+                        "de": "Schützt Nutzerdaten vor unbefugtem Zugriff und wird zur Absicherung von Google-Konten verwendet.",
+                        "en": "Protects user data from unauthorized access and helps secure Google accounts."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "Meta Pixel (Facebook)",
+            "service_identifier": "meta-pixel",
+            "service_provider": ".facebook.com,.connect.facebook.net",
+            "service_aliases": [
+                "meta pixel",
+                "facebook pixel",
+                "fb pixel",
+                "facebook",
+                "meta"
+            ],
+            "is_third_party": true,
+            "service_privacy_link": "https://www.facebook.com/privacy/policy/",
+            "service_publisher": "Meta Platforms Ireland Ltd.",
+            "service_data_collected": {
+                "de": "Browser-ID; besuchte Seiten; Interaktionen/Events (z.B. Käufe, Formularabsendungen); IP-Adresse",
+                "en": "Browser ID; pages visited; interactions/events (e.g. purchases, form submissions); IP address"
+            },
+            "cookies": [
+                {
+                    "name": "_fbp",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "90 Tage",
+                        "en": "90 days"
+                    },
+                    "purpose": {
+                        "de": "Marketing / Werbung",
+                        "en": "Marketing / advertising"
+                    },
+                    "description": {
+                        "de": "First-Party-Cookie des Meta Pixels, das den Browser zur Auslieferung von Werbung/Retargeting identifiziert.",
+                        "en": "First-party cookie set by the Meta Pixel that identifies the browser for ad delivery/retargeting."
+                    }
+                },
+                {
+                    "name": "_fbc",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "90 Tage",
+                        "en": "90 days"
+                    },
+                    "purpose": {
+                        "de": "Marketing / Conversion-Zuordnung",
+                        "en": "Marketing / conversion attribution"
+                    },
+                    "description": {
+                        "de": "Wird nur gesetzt, wenn der Besuch über eine Facebook-/Instagram-Anzeige erfolgt, und speichert die Klick-Information.",
+                        "en": "Only set when the visit originates from a Facebook/Instagram ad, storing the click information."
+                    }
+                },
+                {
+                    "name": "fr",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "90 Tage",
+                        "en": "90 days"
+                    },
+                    "purpose": {
+                        "de": "Marketing / Werbung",
+                        "en": "Marketing / advertising"
+                    },
+                    "description": {
+                        "de": "Ermöglicht personalisierte Werbung sowie die Messung und Verbesserung von Anzeigen über verschiedene Websites hinweg.",
+                        "en": "Enables personalized advertising and helps measure and improve ads across different websites."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "LinkedIn Insight Tag",
+            "service_identifier": "linkedin-insight",
+            "service_provider": ".linkedin.com,.licdn.com",
+            "service_aliases": [
+                "linkedin",
+                "linkedin insight tag",
+                "linkedin ads",
+                "li insight"
+            ],
+            "is_third_party": true,
+            "service_privacy_link": "https://www.linkedin.com/legal/privacy-policy",
+            "service_publisher": "LinkedIn Ireland Unlimited Company",
+            "service_data_collected": {
+                "de": "Browser-/Geräte-ID; besuchte Seiten; Conversion-Ereignisse; ggf. LinkedIn-Mitglieds-ID bei eingeloggten Nutzern",
+                "en": "Browser/device ID; pages visited; conversion events; LinkedIn member ID when the user is logged in"
+            },
+            "cookies": [
+                {
+                    "name": "li_fat_id",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "90 Tage",
+                        "en": "90 days"
+                    },
+                    "purpose": {
+                        "de": "Marketing / Werbung",
+                        "en": "Marketing / advertising"
+                    },
+                    "description": {
+                        "de": "Verknüpft Website-Besuche mit einem LinkedIn-Mitgliedskonto, sofern der Nutzer eingeloggt ist.",
+                        "en": "Links website visits to a LinkedIn member account when the user is logged in."
+                    }
+                },
+                {
+                    "name": "li_sugr",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "90 Tage",
+                        "en": "90 days"
+                    },
+                    "purpose": {
+                        "de": "Marketing / Werbung",
+                        "en": "Marketing / advertising"
+                    },
+                    "description": {
+                        "de": "Erstellt einen probabilistischen Fingerabdruck zur Identifizierung, falls keine Mitglieds-ID vorliegt.",
+                        "en": "Creates a probabilistic fingerprint-based identifier for measurement when no member ID is available."
+                    }
+                },
+                {
+                    "name": "bcookie",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "2 Jahre",
+                        "en": "2 years"
+                    },
+                    "purpose": {
+                        "de": "Marketing / Werbung",
+                        "en": "Marketing / advertising"
+                    },
+                    "description": {
+                        "de": "Browser-Identifikator von LinkedIn zur Wiedererkennung des Browsers über Sitzungen hinweg.",
+                        "en": "LinkedIn's browser identifier used to recognize the browser across sessions."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "Matomo",
+            "service_identifier": "matomo",
+            "service_provider": "",
+            "service_aliases": [
+                "matomo",
+                "piwik"
+            ],
+            "is_third_party": false,
+            "service_privacy_link": "https://matomo.org/privacy-policy/",
+            "service_publisher": "Matomo, InnoCraft Ltd.",
+            "service_data_collected": {
+                "de": "Anonymisierte/pseudonymisierte Besucher-ID; besuchte Seiten; Sitzungsdauer; Referrer",
+                "en": "Anonymized/pseudonymized visitor ID; pages visited; session duration; referrer"
+            },
+            "cookies": [
+                {
+                    "name": "_pk_id",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "13 Monate",
+                        "en": "13 months"
+                    },
+                    "purpose": {
+                        "de": "Statistik",
+                        "en": "Statistics"
+                    },
+                    "description": {
+                        "de": "Speichert eine eindeutige Besucher-ID zur Wiedererkennung neuer und wiederkehrender Besucher.",
+                        "en": "Stores a unique visitor ID to recognize new and returning visitors."
+                    }
+                },
+                {
+                    "name": "_pk_ses",
+                    "type": "Session-Cookie",
+                    "lifetime": {
+                        "de": "30 Minuten",
+                        "en": "30 minutes"
+                    },
+                    "purpose": {
+                        "de": "Statistik",
+                        "en": "Statistics"
+                    },
+                    "description": {
+                        "de": "Speichert vorübergehend Daten der aktuellen Sitzung, um mehrere Seitenaufrufe demselben Besuch zuzuordnen.",
+                        "en": "Temporarily stores data of the current visit to attribute several page views to the same visit."
+                    }
+                },
+                {
+                    "name": "_pk_ref",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "6 Monate",
+                        "en": "6 months"
+                    },
+                    "purpose": {
+                        "de": "Statistik",
+                        "en": "Statistics"
+                    },
+                    "description": {
+                        "de": "Speichert Informationen zur Herkunft des Besuchers (Referrer), um Traffic-Quellen auszuwerten.",
+                        "en": "Stores information about the visitor's referrer to evaluate traffic sources."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "Hotjar",
+            "service_identifier": "hotjar",
+            "service_provider": ".hotjar.com",
+            "service_aliases": [
+                "hotjar"
+            ],
+            "is_third_party": true,
+            "service_privacy_link": "https://www.hotjar.com/legal/policies/privacy/",
+            "service_publisher": "Hotjar Ltd.",
+            "service_data_collected": {
+                "de": "Pseudonymisierte Nutzer-ID; Mausbewegungen/Klicks (Heatmaps); Sitzungsaufzeichnungen; Geräteinformationen",
+                "en": "Pseudonymized user ID; mouse movements/clicks (heatmaps); session recordings; device information"
+            },
+            "cookies": [
+                {
+                    "name": "_hjSessionUser_{site_id}",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "1 Jahr",
+                        "en": "1 year"
+                    },
+                    "purpose": {
+                        "de": "Statistik",
+                        "en": "Statistics"
+                    },
+                    "description": {
+                        "de": "Speichert eine für die Website eindeutige Hotjar-Nutzer-ID, damit Verhalten bei erneuten Besuchen derselben ID zugeordnet wird.",
+                        "en": "Stores a Hotjar user ID unique to the site so behavior on repeat visits is attributed to the same ID."
+                    }
+                },
+                {
+                    "name": "_hjSession_{site_id}",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "30 Minuten",
+                        "en": "30 minutes"
+                    },
+                    "purpose": {
+                        "de": "Statistik",
+                        "en": "Statistics"
+                    },
+                    "description": {
+                        "de": "Hält aktuelle Sitzungsdaten, damit mehrere Anfragen innerhalb des Sitzungsfensters derselben Hotjar-Sitzung zugeordnet werden.",
+                        "en": "Holds current session data so multiple requests within the session window are attributed to the same Hotjar session."
+                    }
+                },
+                {
+                    "name": "_hjCookieTest",
+                    "type": "Session-Cookie",
+                    "lifetime": {
+                        "de": "unter 1 Sekunde",
+                        "en": "under 1 second"
+                    },
+                    "purpose": {
+                        "de": "Funktional",
+                        "en": "Functional"
+                    },
+                    "description": {
+                        "de": "Prüft kurzzeitig, ob der Browser des Nutzers Cookies zulässt; wird sofort nach Erstellung wieder gelöscht.",
+                        "en": "Briefly tests whether the user's browser accepts cookies; deleted almost immediately after creation."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "Vimeo",
+            "service_identifier": "vimeo",
+            "service_provider": ".vimeo.com,.player.vimeo.com",
+            "service_aliases": [
+                "vimeo",
+                "vimeo player",
+                "vimeo embed"
+            ],
+            "is_third_party": true,
+            "service_privacy_link": "https://vimeo.com/privacy",
+            "service_publisher": "Vimeo.com, Inc.",
+            "service_data_collected": {
+                "de": "Pseudonyme Nutzer-ID; angesehene Videos; Wiedergabeeinstellungen; IP-Adresse",
+                "en": "Pseudonymous user ID; videos viewed; playback settings; IP address"
+            },
+            "cookies": [
+                {
+                    "name": "vuid",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "2 Jahre",
+                        "en": "2 years"
+                    },
+                    "purpose": {
+                        "de": "Statistik",
+                        "en": "Statistics"
+                    },
+                    "description": {
+                        "de": "Sammelt anonymisierte Informationen darüber, wie eingebettete Vimeo-Videos auf der Website genutzt werden.",
+                        "en": "Collects anonymized information about how embedded Vimeo videos are used on the website."
+                    }
+                },
+                {
+                    "name": "player",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "1 Jahr",
+                        "en": "1 year"
+                    },
+                    "purpose": {
+                        "de": "Wiedergabeeinstellungen",
+                        "en": "Playback preferences"
+                    },
+                    "description": {
+                        "de": "Speichert Wiedergabeeinstellungen, damit bevorzugte Einstellungen beim nächsten Videoaufruf übernommen werden.",
+                        "en": "Stores playback settings so preferred settings are reused on the next video view."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "Microsoft Clarity",
+            "service_identifier": "microsoft-clarity",
+            "service_provider": ".clarity.ms,.bing.com",
+            "service_aliases": [
+                "microsoft clarity",
+                "clarity",
+                "ms clarity"
+            ],
+            "is_third_party": true,
+            "service_privacy_link": "https://privacy.microsoft.com/de-de/privacystatement",
+            "service_publisher": "Microsoft Corporation",
+            "service_data_collected": {
+                "de": "Pseudonyme Nutzer-ID; Klicks/Scrollverhalten (Heatmaps); Sitzungsaufzeichnungen; Geräteinformationen",
+                "en": "Pseudonymous user ID; clicks/scroll behavior (heatmaps); session recordings; device information"
+            },
+            "cookies": [
+                {
+                    "name": "_clck",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "1 Jahr",
+                        "en": "1 year"
+                    },
+                    "purpose": {
+                        "de": "Statistik",
+                        "en": "Statistics"
+                    },
+                    "description": {
+                        "de": "Speichert eine eindeutige Nutzer-ID, damit wiederkehrende Besucher erkannt und Einstellungen konsistent gehalten werden.",
+                        "en": "Stores a unique user ID so returning visitors are recognized and settings stay consistent."
+                    }
+                },
+                {
+                    "name": "_clsk",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "1 Tag",
+                        "en": "1 day"
+                    },
+                    "purpose": {
+                        "de": "Statistik",
+                        "en": "Statistics"
+                    },
+                    "description": {
+                        "de": "Fasst mehrere Seitenaufrufe zu einer einzigen Clarity-Sitzung zusammen, um ein vollständiges Bild des Besuchs zu erhalten.",
+                        "en": "Combines multiple page views into a single Clarity session to provide a comprehensive view of the visit."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "TikTok Pixel",
+            "service_identifier": "tiktok-pixel",
+            "service_provider": ".tiktok.com,.analytics.tiktok.com",
+            "service_aliases": [
+                "tiktok",
+                "tiktok pixel",
+                "tiktok ads"
+            ],
+            "is_third_party": true,
+            "service_privacy_link": "https://www.tiktok.com/legal/page/global/privacy-policy/en",
+            "service_publisher": "TikTok Information Technologies UK Limited / TikTok Inc.",
+            "service_data_collected": {
+                "de": "Browser-ID; Klick-ID (ttclid); besuchte Seiten; Conversion-Ereignisse (z.B. Käufe, Formulare)",
+                "en": "Browser ID; click ID (ttclid); pages visited; conversion events (e.g. purchases, forms)"
+            },
+            "cookies": [
+                {
+                    "name": "_ttp",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "13 Monate",
+                        "en": "13 months"
+                    },
+                    "purpose": {
+                        "de": "Marketing / Werbung",
+                        "en": "Marketing / advertising"
+                    },
+                    "description": {
+                        "de": "First-Party-Cookie, das einen Besucher eindeutig identifiziert, um Website-Aktionen mit TikTok-Anzeigenkontakten abzugleichen.",
+                        "en": "First-party cookie that uniquely identifies a visitor to match website actions with TikTok ad views."
+                    }
+                },
+                {
+                    "name": "_tt_enable_cookie",
+                    "type": "Session-Cookie",
+                    "lifetime": {
+                        "de": "Sitzung",
+                        "en": "Session"
+                    },
+                    "purpose": {
+                        "de": "Marketing / Werbung",
+                        "en": "Marketing / advertising"
+                    },
+                    "description": {
+                        "de": "Zeigt an, dass das TikTok-Tracking auf der Seite aktiv ist.",
+                        "en": "Indicates that TikTok tracking is active on the page."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "Instagram-Embed",
+            "service_identifier": "instagram-embed",
+            "service_provider": ".instagram.com,.cdninstagram.com",
+            "service_aliases": [
+                "instagram",
+                "instagram embed",
+                "ig embed",
+                "insta"
+            ],
+            "is_third_party": true,
+            "service_privacy_link": "https://privacycenter.instagram.com/policy",
+            "service_publisher": "Meta Platforms Ireland Ltd.",
+            "service_data_collected": {
+                "de": "Geräte-/Browser-ID; IP-Adresse; Interaktionen mit dem eingebetteten Beitrag",
+                "en": "Device/browser ID; IP address; interactions with the embedded post"
+            },
+            "cookies": [
+                {
+                    "name": "ig_did",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "1 Jahr",
+                        "en": "1 year"
+                    },
+                    "purpose": {
+                        "de": "Sicherheit / Geräte-Identifikation",
+                        "en": "Security / device identification"
+                    },
+                    "description": {
+                        "de": "Ordnet die Sitzung einem bestimmten Gerät zu, u.a. zur Konsistenz und Betrugserkennung.",
+                        "en": "Associates the session with a specific device, supporting consistency and fraud detection."
+                    }
+                },
+                {
+                    "name": "mid",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "bis zu ca. 20 Jahre",
+                        "en": "up to approx. 20 years"
+                    },
+                    "purpose": {
+                        "de": "Personalisierung",
+                        "en": "Personalization"
+                    },
+                    "description": {
+                        "de": "Maschinen-Identifikator, den Instagram/Meta zur Optimierung eigener Dienste innerhalb und außerhalb von Instagram nutzt.",
+                        "en": "Machine identifier used by Instagram/Meta to optimize its own services inside and outside Instagram."
+                    }
+                },
+                {
+                    "name": "csrftoken",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "1 Jahr",
+                        "en": "1 year"
+                    },
+                    "purpose": {
+                        "de": "Sicherheit",
+                        "en": "Security"
+                    },
+                    "description": {
+                        "de": "Schutz vor Cross-Site-Request-Forgery-Angriffen (CSRF) bei Interaktionen mit dem eingebetteten Inhalt.",
+                        "en": "Protects against cross-site request forgery (CSRF) attacks when interacting with the embedded content."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "Google reCAPTCHA",
+            "service_identifier": "google-recaptcha",
+            "service_provider": ".google.com,.recaptcha.net,.gstatic.com",
+            "service_aliases": [
+                "recaptcha",
+                "google recaptcha",
+                "captcha"
+            ],
+            "is_third_party": true,
+            "service_privacy_link": "https://policies.google.com/privacy",
+            "service_publisher": "Google Ireland Ltd.",
+            "service_data_collected": {
+                "de": "Interaktions- und Geräteinformationen zur Risikoanalyse (z.B. Mausbewegungen, Browser-Metadaten)",
+                "en": "Interaction and device information for risk analysis (e.g. mouse movements, browser metadata)"
+            },
+            "cookies": [
+                {
+                    "name": "_GRECAPTCHA",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "6 Monate",
+                        "en": "6 months"
+                    },
+                    "purpose": {
+                        "de": "Sicherheit / Spam-Schutz",
+                        "en": "Security / spam protection"
+                    },
+                    "description": {
+                        "de": "Wird beim Ausführen von reCAPTCHA gesetzt und dient der Risikoanalyse, um Formulare vor Spam und Bots zu schützen.",
+                        "en": "Set when reCAPTCHA executes and used for risk analysis to protect forms from spam and bots."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "HubSpot",
+            "service_identifier": "hubspot",
+            "service_provider": ".hubspot.com,.hs-scripts.com,.hsforms.com",
+            "service_aliases": [
+                "hubspot",
+                "hubspot forms",
+                "hubspot tracking"
+            ],
+            "is_third_party": true,
+            "service_privacy_link": "https://legal.hubspot.com/privacy-policy",
+            "service_publisher": "HubSpot Ireland Ltd.",
+            "service_data_collected": {
+                "de": "Besucher-ID; besuchte Seiten; Sitzungsdaten; Formulareinsendungen (zur Kontakt-Zuordnung)",
+                "en": "Visitor ID; pages visited; session data; form submissions (for contact matching)"
+            },
+            "cookies": [
+                {
+                    "name": "__hstc",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "13 Monate",
+                        "en": "13 months"
+                    },
+                    "purpose": {
+                        "de": "Statistik",
+                        "en": "Statistics"
+                    },
+                    "description": {
+                        "de": "Haupt-Tracking-Cookie: speichert Domain, eindeutigen Besucher-Token, Zeitstempel des ersten/letzten/aktuellen Besuchs und Sitzungszähler.",
+                        "en": "Main tracking cookie: stores domain, unique visitor token, timestamps of first/last/current visit and a session counter."
+                    }
+                },
+                {
+                    "name": "hubspotutk",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "13 Monate",
+                        "en": "13 months"
+                    },
+                    "purpose": {
+                        "de": "Kontakt-Zuordnung",
+                        "en": "Contact matching"
+                    },
+                    "description": {
+                        "de": "Speichert die Besucheridentität und wird bei Formularabsendungen an HubSpot übermittelt, um Kontakte zu deduplizieren.",
+                        "en": "Stores the visitor identity and is passed to HubSpot on form submission to deduplicate contacts."
+                    }
+                },
+                {
+                    "name": "__hssc",
+                    "type": "Session-Cookie",
+                    "lifetime": {
+                        "de": "30 Minuten",
+                        "en": "30 minutes"
+                    },
+                    "purpose": {
+                        "de": "Statistik",
+                        "en": "Statistics"
+                    },
+                    "description": {
+                        "de": "Verfolgt Sitzungen und bestimmt, ob Sitzungsnummer/Zeitstempel im __hstc-Cookie aktualisiert werden müssen.",
+                        "en": "Tracks sessions and determines whether the session number/timestamps in the __hstc cookie need updating."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "Stripe",
+            "service_identifier": "stripe",
+            "service_provider": ".stripe.com,.m.stripe.com,.stripe.network",
+            "service_aliases": [
+                "stripe",
+                "stripe checkout",
+                "stripe payment"
+            ],
+            "is_third_party": true,
+            "service_privacy_link": "https://stripe.com/privacy",
+            "service_publisher": "Stripe, Inc. / Stripe Payments Europe, Ltd.",
+            "service_data_collected": {
+                "de": "Geräte-/Browser-Kennung; Transaktionsdaten; Verhaltensmerkmale zur Betrugserkennung",
+                "en": "Device/browser identifier; transaction data; behavioral signals for fraud detection"
+            },
+            "cookies": [
+                {
+                    "name": "__stripe_mid",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "1 Jahr",
+                        "en": "1 year"
+                    },
+                    "purpose": {
+                        "de": "Betrugsprävention",
+                        "en": "Fraud prevention"
+                    },
+                    "description": {
+                        "de": "Vergibt eine eindeutige Geräte-ID, die Stripe Radar zur Erstellung eines Betrugsrisikoprofils nutzt.",
+                        "en": "Assigns a unique device identifier used by Stripe Radar to build a fraud risk profile."
+                    }
+                },
+                {
+                    "name": "__stripe_sid",
+                    "type": "Session-Cookie",
+                    "lifetime": {
+                        "de": "30 Minuten",
+                        "en": "30 minutes"
+                    },
+                    "purpose": {
+                        "de": "Betrugsprävention",
+                        "en": "Fraud prevention"
+                    },
+                    "description": {
+                        "de": "Verfolgt die Browsersitzung während des Bezahlvorgangs zur Betrugserkennung.",
+                        "en": "Tracks the browsing session during the payment flow for fraud detection purposes."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "Cloudflare (Bot-/DDoS-Schutz)",
+            "service_identifier": "cloudflare",
+            "service_provider": "",
+            "service_aliases": [
+                "cloudflare",
+                "cf",
+                "cloudflare bot management",
+                "ddos schutz"
+            ],
+            "is_third_party": false,
+            "service_privacy_link": "https://www.cloudflare.com/privacypolicy/",
+            "service_publisher": "Cloudflare, Inc.",
+            "service_data_collected": {
+                "de": "Bot-Score / Sicherheits-Freigabestatus; IP-Adresse; Anfrageverhalten",
+                "en": "Bot score / security clearance status; IP address; request behavior"
+            },
+            "cookies": [
+                {
+                    "name": "__cf_bm",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "30 Minuten",
+                        "en": "30 minutes"
+                    },
+                    "purpose": {
+                        "de": "Sicherheit / Bot-Erkennung",
+                        "en": "Security / bot detection"
+                    },
+                    "description": {
+                        "de": "Notwendig für Cloudflares Bot-Management, um automatisierten von menschlichem Traffic zu unterscheiden.",
+                        "en": "Necessary for Cloudflare's bot management to distinguish automated traffic from human traffic."
+                    }
+                },
+                {
+                    "name": "cf_clearance",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "wenige Sekunden bis 24 Stunden (konfigurierbar)",
+                        "en": "a few seconds to 24 hours (configurable)"
+                    },
+                    "purpose": {
+                        "de": "Sicherheit",
+                        "en": "Security"
+                    },
+                    "description": {
+                        "de": "Bestätigt, dass ein Besucher eine Sicherheitsüberprüfung (Challenge) bestanden hat, damit diese nicht erneut ausgelöst wird.",
+                        "en": "Confirms that a visitor has passed a security challenge so it is not triggered again."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "Google Tag Manager (GTM)",
+            "service_identifier": "google-tag-manager",
+            "service_provider": ".googletagmanager.com",
+            "service_aliases": [
+                "google tag manager",
+                "gtm",
+                "tag manager"
+            ],
+            "is_third_party": true,
+            "service_privacy_link": "https://policies.google.com/privacy",
+            "service_publisher": "Google Ireland Ltd.",
+            "service_data_collected": {
+                "de": "Keine eigenen Nutzerdaten im Normalbetrieb - GTM ist ein Container, der andere Tags (z.B. Analytics, Ads) lädt und ausführt.",
+                "en": "No user data of its own in normal operation - GTM is a container that loads and executes other tags (e.g. Analytics, Ads)."
+            },
+            "cookies": [
+                {
+                    "name": {
+                        "de": "(keine im Normalbetrieb)",
+                        "en": "(none in normal operation)"
+                    },
+                    "type": "-",
+                    "lifetime": {
+                        "de": "-",
+                        "en": "-"
+                    },
+                    "purpose": {
+                        "de": "Tag-Verwaltung (kein Tracking)",
+                        "en": "Tag management (no tracking)"
+                    },
+                    "description": {
+                        "de": "GTM selbst setzt standardmäßig keine Cookies - es lädt lediglich die konfigurierten Tags (z.B. Google Analytics, Ads-Pixel), deren jeweilige Cookies separat zu deklarieren sind. Ausnahme: Im 'Preview & Debug'-Modus setzt GTM temporäre First-Party-Cookies für Administratoren, die beim Verlassen des Modus gelöscht werden.",
+                        "en": "GTM itself does not set cookies by default - it only loads the configured tags (e.g. Google Analytics, Ads pixels), whose respective cookies must be declared separately. Exception: In 'Preview & Debug' mode, GTM sets temporary first-party cookies for administrators, which are deleted upon exiting that mode."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "Matomo Tag Manager (MTM)",
+            "service_identifier": "matomo-tag-manager",
+            "service_provider": "",
+            "service_aliases": [
+                "matomo tag manager",
+                "mtm",
+                "matomo tagmanager"
+            ],
+            "is_third_party": false,
+            "service_privacy_link": "https://matomo.org/privacy-policy/",
+            "service_publisher": "Matomo, InnoCraft Ltd.",
+            "service_data_collected": {
+                "de": "Einwilligungsstatus des Besuchers für nachgelagerte Tags. MTM selbst führt kein eigenes Tracking durch, sondern lädt konfigurierte Tags (z.B. Matomo Analytics).",
+                "en": "Visitor's consent status for downstream tags. MTM itself does not perform its own tracking but loads configured tags (e.g. Matomo Analytics)."
+            },
+            "cookies": [
+                {
+                    "name": "mtm_consent / mtm_cookie_consent",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "dauerhaft (bis zum Widerruf)",
+                        "en": "persistent (until revoked)"
+                    },
+                    "purpose": {
+                        "de": "Einwilligungsverwaltung",
+                        "en": "Consent management"
+                    },
+                    "description": {
+                        "de": "Speichert, dass der Besucher der Cookie-Nutzung zugestimmt hat, damit nachgelagerte Tags (z.B. Matomo Analytics) entsprechend Cookies setzen dürfen.",
+                        "en": "Stores that the visitor has consented to cookie usage so downstream tags (e.g. Matomo Analytics) may set cookies accordingly."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "SoundCloud Player",
+            "service_identifier": "soundcloud",
+            "service_provider": ".soundcloud.com",
+            "service_aliases": [
+                "soundcloud",
+                "soundcloud player",
+                "soundcloud embed"
+            ],
+            "is_third_party": true,
+            "service_privacy_link": "https://soundcloud.com/pages/privacy",
+            "service_publisher": "SoundCloud Global Limited & Co. KG",
+            "service_data_collected": {
+                "de": "Anonyme Wiedergabe-ID; abgespielte Tracks; IP-Adresse (gekürzt)",
+                "en": "Anonymous playback ID; tracks played; IP address (truncated)"
+            },
+            "cookies": [
+                {
+                    "name": "sc_anonymous_id",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "1 Jahr",
+                        "en": "1 year"
+                    },
+                    "purpose": {
+                        "de": "Statistik",
+                        "en": "Statistics"
+                    },
+                    "description": {
+                        "de": "Verfolgt anonymisierte Wiedergabe-Ereignisse eingebetteter Player für interne Statistiken; SoundCloud kann daraus kein konkretes Nutzerkonto ableiten.",
+                        "en": "Tracks anonymized playback events of embedded players for internal analytics; SoundCloud cannot derive a specific user account from it."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "Spotify-Embed",
+            "service_identifier": "spotify",
+            "service_provider": ".spotify.com,.scdn.co",
+            "service_aliases": [
+                "spotify",
+                "spotify embed",
+                "spotify player"
+            ],
+            "is_third_party": true,
+            "service_privacy_link": "https://www.spotify.com/de/legal/privacy-policy/",
+            "service_publisher": "Spotify AB",
+            "service_data_collected": {
+                "de": "Wiedergabe-/Interaktionsdaten mit dem eingebetteten Player; Anmeldestatus bei Spotify (falls eingeloggt)",
+                "en": "Playback/interaction data with the embedded player; Spotify login status (if logged in)"
+            },
+            "cookies": [
+                {
+                    "name": "sp_t",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "1 Jahr",
+                        "en": "1 year"
+                    },
+                    "purpose": {
+                        "de": "Funktional / Statistik",
+                        "en": "Functional / statistics"
+                    },
+                    "description": {
+                        "de": "Notwendig für die Funktionalität des eingebetteten Spotify-Players; erfasst zudem Interaktionen mit dem Audioinhalt.",
+                        "en": "Required for the functionality of the embedded Spotify player; also registers interactions with the audio content."
+                    }
+                },
+                {
+                    "name": "sp_landing",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "1 Tag",
+                        "en": "1 day"
+                    },
+                    "purpose": {
+                        "de": "Funktional",
+                        "en": "Functional"
+                    },
+                    "description": {
+                        "de": "Speichert die Landing-Page/URL, über die der eingebettete Player aufgerufen wurde.",
+                        "en": "Stores the landing page/URL through which the embedded player was accessed."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "GitHub Pages",
+            "service_identifier": "github-pages",
+            "service_provider": ".github.io,.githubusercontent.com",
+            "service_aliases": [
+                "github pages",
+                "github.io",
+                "gh pages"
+            ],
+            "is_third_party": true,
+            "service_privacy_link": "https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement",
+            "service_publisher": "GitHub, Inc. (Microsoft Corporation)",
+            "service_data_collected": {
+                "de": "Im Standardbetrieb keine - GitHub Pages liefert statische Inhalte aus und setzt selbst keine Cookies, sofern die Website nicht zusätzlichen eigenen Code (z.B. Google Analytics) einbindet oder als privates GitHub-Enterprise-Pages genutzt wird.",
+                "en": "None by default - GitHub Pages serves static content and does not set cookies itself, unless the site embeds additional custom code (e.g. Google Analytics) or is used as private GitHub Enterprise Pages."
+            },
+            "cookies": [
+                {
+                    "name": {
+                        "de": "(keine im Standardbetrieb)",
+                        "en": "(none by default)"
+                    },
+                    "type": "-",
+                    "lifetime": {
+                        "de": "-",
+                        "en": "-"
+                    },
+                    "purpose": {
+                        "de": "Statisches Hosting (kein Tracking)",
+                        "en": "Static hosting (no tracking)"
+                    },
+                    "description": {
+                        "de": "GitHub Pages selbst setzt bei öffentlichen Seiten keine Cookies. Cookies wie _gh_sess, logged_in oder user_session gehören zur github.com-Weboberfläche (Login/Repo-Verwaltung), nicht zur ausgelieferten Pages-Website. Bindet die Website eigene Skripte ein (z.B. Analytics), müssen deren Cookies separat deklariert werden.",
+                        "en": "GitHub Pages itself does not set cookies on public sites. Cookies such as _gh_sess, logged_in or user_session belong to the github.com web interface (login/repo management), not to the served Pages website. If the site embeds its own scripts (e.g. analytics), their cookies must be declared separately."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "Unbekannter iframe (Vorlage - vor Nutzung ausfüllen)",
+            "service_identifier": "unknown-iframe-template",
+            "service_provider": "",
+            "service_aliases": [
+                "unbekannt",
+                "unknown",
+                "sonstiger dienst",
+                "generischer iframe"
+            ],
+            "is_third_party": "unknown",
+            "service_privacy_link": "",
+            "service_publisher": "",
+            "service_data_collected": {
+                "de": "",
+                "en": ""
+            },
+            "cookies": [
+                {
+                    "name": "unknown",
+                    "type": "unknown",
+                    "lifetime": {
+                        "de": "unknown",
+                        "en": "unknown"
+                    },
+                    "purpose": {
+                        "de": "unknown",
+                        "en": "unknown"
+                    },
+                    "description": {
+                        "de": "unknown",
+                        "en": "unknown"
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "Consent Banner (Kirby-Plugin berbach/kirby-consent-banner)",
+            "service_identifier": "kirby-consent-banner",
+            "service_provider": "",
+            "service_aliases": [
+                "consent banner",
+                "berbach",
+                "bbconsentpreferences",
+                "cookie banner",
+                "kirby consent banner"
+            ],
+            "is_third_party": false,
+            "service_privacy_link": "",
+            "service_publisher": "Website-Betreiber (Eigenbetrieb)",
+            "service_data_collected": {
+                "de": "Ausgewählte Consent-Einstellungen je Dienst (welchen Diensten zugestimmt wurde) und die Version des Banners; zusätzlich führt das Plugin auf dem Server der Website ein Consent-Protokoll je Besucher mit einer aus Browser-Merkmalen errechneten Kennung (User-ID), der Auswahl und dem Zeitpunkt. Einträge werden nach Ablauf der Laufzeit der Einwilligung gelöscht.",
+                "en": "The selected consent settings per service (which services were consented to) and the version of the banner; in addition the plugin keeps a consent log per visitor on the server of the website, with an identifier calculated from browser properties (user ID), the selection and the time. Entries are deleted when the lifetime of the consent has passed."
+            },
+            "cookies": [
+                {
+                    "name": "BbConsentPreferences",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "Laufzeit der Einwilligung (1 bis 3 Jahre, je nach Einstellung des Banners)",
+                        "en": "Lifetime of the consent (1 to 3 years, as set in the banner)"
+                    },
+                    "purpose": {
+                        "de": "Consent Banner Einstellungen",
+                        "en": "Consent banner settings"
+                    },
+                    "description": {
+                        "de": "Technisch notwendiger Cookie mit der getroffenen Auswahl je Dienst. Tracking-Dienste lesen ihn beim Laden der Seite, damit sie nur mit Einwilligung starten.",
+                        "en": "Strictly necessary cookie with the selection per service. Tracking services read it when the page loads so that they only start with consent."
+                    }
+                },
+                {
+                    "name": "BbConsentPreferences",
+                    "type": "LocalStorage",
+                    "lifetime": {
+                        "de": "dauerhaft (bis zum Löschen der Website-Daten)",
+                        "en": "persistent (until the website data is deleted)"
+                    },
+                    "purpose": {
+                        "de": "Consent Banner Einstellungen",
+                        "en": "Consent banner settings"
+                    },
+                    "description": {
+                        "de": "Technisch notwendiger LocalStorage-Eintrag mit der Auswahl, der User-ID, der Version des Banners und dem Zeitpunkt der Entscheidung. Daran erkennt der Banner, ob er nach Ablauf seiner Laufzeit oder nach einer Änderung erneut fragen muss.",
+                        "en": "Strictly necessary localStorage entry with the selection, the user ID, the version of the banner and the time of the decision. It tells the banner whether to ask again once its lifetime has passed or after a change."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "Consent Banner (TYPO3-Extension bb/consent_banner)",
+            "service_identifier": "consent-banner",
+            "service_provider": "",
+            "service_aliases": [
+                "consent banner",
+                "berbach",
+                "bbconsentpreferences",
+                "cookie banner",
+                "typo3 consent banner"
+            ],
+            "is_third_party": false,
+            "service_privacy_link": "https://berbach.de/privacy",
+            "service_publisher": "berbach GmbH (Entwickler der Extension; Agentur für Design und Medien, Berlin)",
+            "service_data_collected": {
+                "de": "Ausgewählte Cookie-/Consent-Einstellungen pro Gruppe und Component (z.B. welchen Diensten zugestimmt wurde); die aktuelle Banner-Version; zusätzlich führt die Extension serverseitig ein revisionssicheres Consent-Protokoll je Besucher auf Basis eines Browser-Fingerprints (mandantenfähig über mehrere Sites hinweg, mit automatischer Löschung nach Aufbewahrungsfrist).",
+                "en": "The selected cookie/consent settings per group and component (e.g. which services were consented to); the current banner version; the extension additionally keeps a server-side, audit-proof consent log per visitor based on a browser fingerprint (multi-site capable, with automatic deletion after the retention period)."
+            },
+            "cookies": [
+                {
+                    "name": "BbConsentPreferences",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "14 Tage",
+                        "en": "14 days"
+                    },
+                    "purpose": {
+                        "de": "Consent Banner Einstellungen",
+                        "en": "Consent banner settings"
+                    },
+                    "description": {
+                        "de": "Technisch notwendiger Cookie, der die getroffene Consent-Auswahl serverseitig abrufbar hält, damit das Banner bei erneutem Besuch nicht unnötig erneut angezeigt wird. Die Lifetime ist pro Banner in der TYPO3-Backend-Konfiguration einstellbar; bei Änderung des Banners (neue banner_version) wird die Einwilligung unabhängig von der Lifetime erneut abgefragt.",
+                        "en": "Strictly necessary cookie that keeps the given consent selection retrievable server-side so the banner is not shown again unnecessarily on a repeat visit. The lifetime is configurable per banner in the TYPO3 backend; if the banner changes (new banner_version), consent is requested again regardless of the remaining lifetime."
+                    }
+                },
+                {
+                    "name": "BbConsentPreferences",
+                    "type": "LocalStorage",
+                    "lifetime": {
+                        "de": "1 Jahr",
+                        "en": "1 year"
+                    },
+                    "purpose": {
+                        "de": "Consent Banner Einstellungen",
+                        "en": "Consent banner settings"
+                    },
+                    "description": {
+                        "de": "Technisch notwendiger LocalStorage-Eintrag, der dieselbe Consent-Auswahl zusätzlich lokal im Browser hält, damit z.B. bei eingebetteten Inhalten (Iframes, Google Consent Mode, Matomo, nachgeladene Skripte) die Freischaltung ohne Seiten-Reload sofort und konsistent angewendet werden kann.",
+                        "en": "Strictly necessary localStorage entry that additionally keeps the same consent selection locally in the browser so that, e.g. for embedded content (iframes, Google Consent Mode, Matomo, loaded scripts), unlocking can be applied immediately and consistently without a page reload."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "TYPO3 CMS (Kernsystem)",
+            "service_identifier": "typo3-cms",
+            "service_provider": "",
+            "service_aliases": [
+                "typo3",
+                "typo3 cms",
+                "typo3 backend"
+            ],
+            "is_third_party": false,
+            "service_privacy_link": "",
+            "service_publisher": "TYPO3 Association / Website-Betreiber (Eigenbetrieb)",
+            "service_data_collected": {
+                "de": "Sitzungs-ID zur Wiedererkennung eingeloggter Frontend- bzw. Backend-Nutzer. Keine Daten, die an TYPO3 als Organisation übermittelt werden - alles bleibt auf dem eigenen Server des Betreibers.",
+                "en": "Session ID to recognize logged-in frontend or backend users. No data is transmitted to TYPO3 as an organization - everything stays on the operator's own server."
+            },
+            "cookies": [
+                {
+                    "name": "fe_typo_user",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "Sitzung (Standard); optional dauerhaft konfigurierbar über 'Angemeldet bleiben'/permalogin",
+                        "en": "Session (default); optionally configurable to be persistent via 'stay logged in'/permalogin"
+                    },
+                    "purpose": {
+                        "de": "Frontend-Login",
+                        "en": "Frontend login"
+                    },
+                    "description": {
+                        "de": "Technisch notwendiger Cookie zur Identifikation einer angemeldeten Sitzung im Website-Frontend (z.B. Mitgliederbereich, geschützte Inhalte). Wird nur gesetzt, wenn sich ein Nutzer einloggt oder Sitzungsdaten anfallen.",
+                        "en": "Strictly necessary cookie identifying a logged-in session on the website's frontend (e.g. member area, protected content). Only set when a user logs in or session data is created."
+                    }
+                },
+                {
+                    "name": "be_typo_user",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "Sitzung",
+                        "en": "Session"
+                    },
+                    "purpose": {
+                        "de": "Backend-Login (Redakteure/Administratoren)",
+                        "en": "Backend login (editors/administrators)"
+                    },
+                    "description": {
+                        "de": "Technisch notwendiger Cookie zur Identifikation einer angemeldeten Sitzung im TYPO3-Backend. Betrifft nur Redakteure/Administratoren, keine regulären Website-Besucher.",
+                        "en": "Strictly necessary cookie identifying a logged-in session in the TYPO3 backend. Only relevant for editors/administrators, not regular website visitors."
+                    }
+                },
+                {
+                    "name": "Typo3InstallTool",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "Sitzung",
+                        "en": "Session"
+                    },
+                    "purpose": {
+                        "de": "System-Wartung",
+                        "en": "System maintenance"
+                    },
+                    "description": {
+                        "de": "Technisch notwendiger Cookie zur Absicherung der Sitzung im TYPO3 Install Tool (Systemwartungsbereich). Nur für Administratoren relevant.",
+                        "en": "Strictly necessary cookie securing the session in the TYPO3 Install Tool (system maintenance area). Only relevant for administrators."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "WordPress (Kernsystem)",
+            "service_identifier": "wordpress-core",
+            "service_provider": "",
+            "service_aliases": [
+                "wordpress",
+                "wp",
+                "wordpress cms"
+            ],
+            "is_third_party": false,
+            "service_privacy_link": "Datenschutzerklärung des jeweiligen Website-Betreibers (WordPress selbst ist Open-Source-Software ohne eigenen Anbieter-Datenverkehr)",
+            "service_publisher": "WordPress Foundation / Website-Betreiber (Eigenbetrieb)",
+            "service_data_collected": {
+                "de": "Login-Sitzungs-ID eingeloggter Nutzer; bei Kommentarfunktion optional Name, E-Mail-Adresse und Website-URL des Kommentierenden. Keine Daten, die an WordPress als Organisation übermittelt werden.",
+                "en": "Login session ID of logged-in users; if the comment function is used, optionally the commenter's name, email address and website URL. No data is transmitted to WordPress as an organization."
+            },
+            "cookies": [
+                {
+                    "name": "wordpress_logged_in_[hash]",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "Sitzung (Standard); bei 'Angemeldet bleiben' länger konfigurierbar",
+                        "en": "Session (default); configurable to last longer with 'stay logged in'"
+                    },
+                    "purpose": {
+                        "de": "Login",
+                        "en": "Login"
+                    },
+                    "description": {
+                        "de": "Technisch notwendiger Cookie, der anzeigt, dass und als wer ein Nutzer eingeloggt ist; wird für die meisten Interface-Funktionen benötigt.",
+                        "en": "Strictly necessary cookie indicating that and as whom a user is logged in; required for most interface functions."
+                    }
+                },
+                {
+                    "name": "wp-settings-{time}-[UID]",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "1 Jahr",
+                        "en": "1 year"
+                    },
+                    "purpose": {
+                        "de": "Oberflächen-Einstellungen",
+                        "en": "Interface settings"
+                    },
+                    "description": {
+                        "de": "Passt die Ansicht des Backends und ggf. der Website an die individuellen Einstellungen des jeweiligen angemeldeten Nutzers (UID = Nutzer-ID) an.",
+                        "en": "Customizes the view of the backend and possibly the site to the individual settings of the respective logged-in user (UID = user ID)."
+                    }
+                },
+                {
+                    "name": "comment_author_[hash] / comment_author_email_[hash] / comment_author_url_[hash]",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "ca. 347 Tage (knapp 1 Jahr)",
+                        "en": "approx. 347 days (just under 1 year)"
+                    },
+                    "purpose": {
+                        "de": "Komfortfunktion Kommentarformular",
+                        "en": "Comment form convenience"
+                    },
+                    "description": {
+                        "de": "Nicht technisch notwendig: merkt sich Name, E-Mail-Adresse und Website des Kommentierenden, damit diese Felder beim nächsten Kommentar automatisch ausgefüllt werden. Wird nur gesetzt, wenn ein Nutzer tatsächlich kommentiert.",
+                        "en": "Not strictly necessary: remembers the commenter's name, email address and website so these fields are auto-filled on the next comment. Only set when a user actually leaves a comment."
+                    }
+                },
+                {
+                    "name": "wordpress_test_cookie",
+                    "type": "Session-Cookie",
+                    "lifetime": {
+                        "de": "Sitzung",
+                        "en": "Session"
+                    },
+                    "purpose": {
+                        "de": "Technische Prüfung",
+                        "en": "Technical check"
+                    },
+                    "description": {
+                        "de": "Prüft testweise, ob der Browser des Nutzers Cookies unterstützt/zulässt.",
+                        "en": "Tests whether the user's browser supports/allows cookies."
+                    }
+                }
+            ]
+        },
+        {
+            "service_name": "Kirby CMS 5 (Kernsystem)",
+            "service_identifier": "kirby-cms",
+            "service_provider": "",
+            "service_aliases": [
+                "kirby",
+                "kirby cms",
+                "kirby 5",
+                "getkirby"
+            ],
+            "is_third_party": false,
+            "service_privacy_link": "https://getkirby.com/docs/guide/kirby-and-privacy",
+            "service_publisher": "Kirby (Getkirby.com) / Website-Betreiber (Eigenbetrieb)",
+            "service_data_collected": {
+                "de": "Sitzungs-ID eingeloggter Panel- bzw. Frontend-Nutzer. Laut Anbieter keine Kommunikation mit Drittanbieter-Servern und keine Tracker/Analytics im Kern.",
+                "en": "Session ID of logged-in Panel or frontend users. According to the vendor, no communication with third-party servers and no trackers/analytics in the core."
+            },
+            "cookies": [
+                {
+                    "name": "kirby_session",
+                    "type": "Cookie",
+                    "lifetime": {
+                        "de": "2 Stunden (Standard-Sitzung); bis zu 2 Wochen bei 'Angemeldet bleiben'",
+                        "en": "2 hours (default session); up to 2 weeks with 'stay logged in'"
+                    },
+                    "purpose": {
+                        "de": "Login / Sitzungsverwaltung",
+                        "en": "Login / session management"
+                    },
+                    "description": {
+                        "de": "Technisch notwendiger Cookie zur Identifikation einer angemeldeten Sitzung im Kirby-Panel oder bei einem eigenen Login-Formular im Frontend. Wird nur gesetzt, wenn tatsächlich Sitzungsdaten anfallen (z.B. nach Login).",
+                        "en": "Strictly necessary cookie identifying a logged-in session in the Kirby Panel or a custom frontend login form. Only set when session data actually occurs (e.g. after login)."
+                    }
+                }
+            ]
+        }
+    ]
+}

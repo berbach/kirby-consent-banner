@@ -1,0 +1,62 @@
+@charset "utf-8";
+/*
+Helper functions and non–output snippets only (font-face imports, reusable mixins, global variables, colors, etc.)
+One @import per line
+*/
+//Import Abstracts files
+@use "sass:meta";
+@use 'abstracts/variables';
+@use 'abstracts/unit';
+@use 'abstracts/breakpoint';
+@use 'abstracts/mixins';
+
+// Only the elements of the banner: the stylesheet is added to pages of any
+// site and must not change their box model.
+.bb-consentbanner,
+.bb-consentbanner *,
+.bb-consentbanner *::before,
+.bb-consentbanner *::after,
+.bb-consentbanner-placeholder,
+.bb-consentbanner-placeholder *,
+.bb-consentbanner-placeholder *::before,
+.bb-consentbanner-placeholder *::after,
+.bb-button-widget {
+	box-sizing: border-box;
+}
+/*
+All 3rd-party vendor tools (frameworks, libraries, helpers)
+One @import per line
+*/
+//Import Vendor files
+
+
+
+/*
+Global styles (reset import, normalize import, global Typography import, grid imports)
+One @import per line
+ */
+//Import Base files
+
+/*
+header, navigation, canvas. footer, cookie, main...
+One @import per line
+*/
+//Import Layout files
+
+/*
+Micro level reusable components are imported here
+One @import per line
+*/
+//Import Component files
+@include meta.load-css("components/theme");
+@include meta.load-css("components/form");
+@include meta.load-css("components/consentBanner");
+@include meta.load-css("components/cookieInformation");
+@include meta.load-css("components/placeholder");
+
+/*
+Have a single scss for each specific page
+One @import per line
+*/
+//Import pages files
+

@@ -1,0 +1,154 @@
+@use "../abstracts/variables";
+@use "../abstracts/unit";
+
+@use "sass:math";
+@use "sass:map";
+@use "sass:list";
+@use "sass:selector";
+
+
+.#{variables.$prefix}consentbanner {
+    $self: &;
+
+
+    &.#{variables.$prefix}type-scroll {
+      overflow-y: auto;
+    }
+
+    #{$self}-group {
+        padding-top: unit.bb-calc-rem(9);
+        padding-bottom: unit.bb-calc-rem(5);
+        border-bottom: 1px solid variables.$gray;
+        margin-bottom: unit.bb-calc-rem(10);
+
+        &:last-child {
+            border: none;
+            margin-bottom: 0;
+        }
+
+        .#{variables.$prefix}control-label {
+            font-weight: 700;
+        }
+
+
+        #{$self}-components {
+
+            margin-top: unit.bb-calc-rem(8);
+        }
+
+        #{$self}-component {
+            padding-top: unit.bb-calc-rem(5);
+            padding-left: unit.bb-calc-rem(25);
+            padding-bottom: unit.bb-calc-rem(5);
+
+            //&:last-child {
+            //    padding-bottom: 0;
+            //
+            //}
+        }
+
+        #{$self}-description {
+            margin-bottom:  unit.bb-calc-rem(5.5);
+            margin-right:  unit.bb-calc-rem(55);
+            font: {
+                size: unit.bb-calc-rem(14);
+                style: italic;
+            }
+        }
+    }
+
+    &-preferences,
+    &-placeholder {
+
+        .#{variables.$prefix}control-checkbox {
+            display: flex;
+            justify-content: space-between;
+
+            $toggleHeight: 1.5em;
+            $toggleKnobSize: $toggleHeight - .25em;
+
+            input {
+                &:not(:last-child) {
+                    display: none;
+                }
+
+                &:checked + .#{variables.$prefix}toggle {
+                    background: variables.$darkGreen;
+
+                    &:after {
+                        left: 2.5em - .25em - $toggleKnobSize;
+                    }
+                }
+
+                &:indeterminate + .#{variables.$prefix}toggle {
+                    background: variables.$gray;
+
+                    &:after {
+                        left: math.div(2.5em - .25em - $toggleKnobSize, 2);
+                    }
+                }
+
+                &:disabled + .#{variables.$prefix}toggle {
+                    border: unit.bb-calc-rem(2) solid variables.$darkGray80;
+                    background: variables.$lightGray;
+                    opacity: .6;
+                }
+            }
+
+            .#{variables.$prefix}toggle {
+                position: relative;
+                height: $toggleHeight;
+                width: 2.5em;
+
+                border-radius: .75em;
+                border: unit.bb-calc-rem(2) solid variables.$darkGray80;
+                background: variables.$darkGray80;
+
+                transition: .2s ease;
+
+                &:after {
+                    content: '';
+                    display: block;
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    height: $toggleKnobSize;
+                    width: $toggleKnobSize;
+                    border-radius: .75em;
+
+                    background: variables.$white;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+                    transition: .3s cubic-bezier(.7, 0, .1, 1);
+                }
+            }
+        }
+    }
+
+    &.#{variables.$prefix}cb-bottom {
+
+        #{$self}-group {
+            padding-top: 0;
+            padding-bottom: 0;
+            border-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .#{variables.$prefix}control-checkbox {
+            flex-direction: row;
+            margin-bottom: unit.bb-calc-rem(8);
+
+            @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
+                flex-direction: row-reverse;
+                margin-bottom: 0;
+                .#{variables.$prefix}toggle {
+                    margin-right: unit.bb-calc-rem(10);
+                }
+
+            }
+
+        }
+    }
+}
