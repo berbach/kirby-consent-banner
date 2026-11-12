@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Berbach\ConsentBanner\Tests;
+namespace Bb\ConsentBanner\Tests;
 
-use Berbach\ConsentBanner\BannerData;
-use Berbach\ConsentBanner\ConsentBanner;
-use Berbach\ConsentBanner\Renderer;
-use Berbach\ConsentBanner\SaveAction;
+use Bb\ConsentBanner\BannerData;
+use Bb\ConsentBanner\ConsentBanner;
+use Bb\ConsentBanner\Renderer;
+use Bb\ConsentBanner\SaveAction;
 use Kirby\Cms\App;
 use Kirby\Cms\Page;
 use Kirby\Filesystem\Dir;

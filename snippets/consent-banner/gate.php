@@ -16,6 +16,6 @@
 echo consentBanner()->gate(
     (string) ($component ?? ''),
     (string) ($slot ?? ''),
-    (string) ($class ?? \Berbach\ConsentBanner\Placeholder::VARIABLE_HEIGHT),
+    (string) ($class ?? \Bb\ConsentBanner\Placeholder::VARIABLE_HEIGHT),
     is_array($attributes ?? null) ? $attributes : [],
 );

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Berbach\ConsentBanner\Tests;
+namespace Bb\ConsentBanner\Tests;
 
-use Berbach\ConsentBanner\ServiceDatabase;
+use Bb\ConsentBanner\ServiceDatabase;
 use PHPUnit\Framework\TestCase;
 
 final class ServiceDatabaseTest extends TestCase

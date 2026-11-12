@@ -31,12 +31,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Berbach\\ConsentBanner\\": "src/"
+      "Bb\\ConsentBanner\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Berbach\\ConsentBanner\\Tests\\": "tests/"
+      "Bb\\ConsentBanner\\Tests\\": "tests/"
     }
   },
   "extra": {

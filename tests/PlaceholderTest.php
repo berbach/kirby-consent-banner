@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Berbach\ConsentBanner\Tests;
+namespace Bb\ConsentBanner\Tests;
 
-use Berbach\ConsentBanner\Placeholder;
+use Bb\ConsentBanner\Placeholder;
 use PHPUnit\Framework\TestCase;
 
 final class PlaceholderTest extends TestCase

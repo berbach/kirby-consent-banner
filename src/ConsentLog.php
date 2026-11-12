@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Berbach\ConsentBanner;
+namespace Bb\ConsentBanner;
 
 use PDO;
 use RuntimeException;

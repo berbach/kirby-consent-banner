@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Berbach\ConsentBanner;
+namespace Bb\ConsentBanner;
 
 /**
  * The service database that comes with the plugin (data/cookie_database.json):

@@ -1,11 +1,11 @@
 <?php
 
-use Berbach\ConsentBanner\ConsentBanner;
-use Berbach\ConsentBanner\HiddenPage;
-use Berbach\ConsentBanner\Panel;
-use Berbach\ConsentBanner\Renderer;
-use Berbach\ConsentBanner\SaveAction;
-use Berbach\ConsentBanner\ServiceDatabase;
+use Bb\ConsentBanner\ConsentBanner;
+use Bb\ConsentBanner\HiddenPage;
+use Bb\ConsentBanner\Panel;
+use Bb\ConsentBanner\Renderer;
+use Bb\ConsentBanner\SaveAction;
+use Bb\ConsentBanner\ServiceDatabase;
 use Kirby\Cms\App as Kirby;
 use Kirby\Cms\Page;
 use Kirby\Exception\PermissionException;
@@ -13,8 +13,8 @@ use Kirby\Exception\PermissionException;
 if (!class_exists(ConsentBanner::class)) {
     // Installed without Composer (download or git submodule)
     spl_autoload_register(static function (string $class): void {
-        if (str_starts_with($class, 'Berbach\\ConsentBanner\\')) {
-            $file = __DIR__ . '/src/' . str_replace('\\', '/', substr($class, strlen('Berbach\\ConsentBanner\\'))) . '.php';
+        if (str_starts_with($class, 'Bb\\ConsentBanner\\')) {
+            $file = __DIR__ . '/src/' . str_replace('\\', '/', substr($class, strlen('Bb\\ConsentBanner\\'))) . '.php';
             if (is_file($file)) {
                 require $file;
             }

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Berbach\ConsentBanner\Tests;
+namespace Bb\ConsentBanner\Tests;
 
-use Berbach\ConsentBanner\ConsentLog;
+use Bb\ConsentBanner\ConsentLog;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
 
