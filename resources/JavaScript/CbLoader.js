@@ -167,6 +167,10 @@ const CbManager = function ()  {
      * @return {void}
      */
     this.openPreferences = () => {
+        // The visitor reopened the settings: closing returns the focus to the
+        // opener. Not after the first decision, that would scroll the page
+        // down to the footer link.
+        this.reopenedByVisitor = true
         const localPreferences = this.getLastPreferences();
         this.createWrapperBanner(true)
         this.createBanner(true)
@@ -184,11 +188,13 @@ const CbManager = function ()  {
         if(!!existBanner) {
             existBanner.removeEventListener('keydown', this.bannerKeydownHandler)
             existBanner.remove();
-            // Return focus to the opener (e.g. the "Cookie settings" link) after close.
+            // Return focus to the opener (e.g. the "Cookie settings" link)
+            // after the visitor reopened the settings with it.
             const focusTarget = this.changePreferences || this.bannerOpener
-            if (focusTarget && typeof focusTarget.focus === 'function' && document.contains(focusTarget)) {
+            if (this.reopenedByVisitor && focusTarget && typeof focusTarget.focus === 'function' && document.contains(focusTarget)) {
                 focusTarget.focus()
             }
+            this.reopenedByVisitor = false
         }
         // Unlock page scroll when the banner is closed.
         document.documentElement.classList.remove(CB_NAME + '--page-locked')
