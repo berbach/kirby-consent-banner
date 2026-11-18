@@ -23,6 +23,9 @@ $cb-label-color: variables.$primaryDarker;
         max-width: unit.bb-calc-rem(1000);
         max-height: 100%;
         background: variables.$white;
+        // Dark text on the white box, also when the site has light text
+        // (dark mode). A site changes it with --bb-cb-text.
+        color: var(--bb-cb-text, #{variables.$blackGray});
         overflow: hidden;
 
         @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
