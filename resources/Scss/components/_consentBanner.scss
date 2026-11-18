@@ -68,7 +68,8 @@ $z-index: 10000 !default;
         left: 0;
         height: 100vh;
         width: 100vw;
-        z-index: $z-index + 1;
+        // inside the banner, below its body (z-index 102)
+        z-index: 100;
     }
 
 
