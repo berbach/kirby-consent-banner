@@ -23,12 +23,15 @@ $max-width: $container-max-width !default;
 // Wide enough for the three buttons in one row, also with wider labels
 // (e.g. capitals in Theme Four)
 $overlay-max-width: unit.bb-calc-rem(880) !default;
+// Above sticky headers and menus of the site (Theme Three: z-index 1000).
+// The cookie information opens one step above (CookieInformation.js).
+$z-index: 10000 !default;
 
 .#{variables.$prefix}consentbanner {
     $self: &;
 
     left: 0;
-    z-index: 99;
+    z-index: $z-index;
     width: 100%;
     position: fixed;
     display: none;
@@ -65,7 +68,7 @@ $overlay-max-width: unit.bb-calc-rem(880) !default;
         left: 0;
         height: 100vh;
         width: 100vw;
-        z-index: 100;
+        z-index: $z-index + 1;
     }
 
 
@@ -659,6 +662,7 @@ $overlay-max-width: unit.bb-calc-rem(880) !default;
             justify-content: center;
             align-items: center;
 
+            color: variables.$darkBlue;
             cursor: pointer;
 
             $icon-height: $size * .5;
@@ -668,10 +672,11 @@ $overlay-max-width: unit.bb-calc-rem(880) !default;
                 display: block;
                 position: absolute;
 
-                width: 1px;
+                width: 2px;
                 height: $icon-height;
 
-                background: variables.$darkBlue;
+                // the colour of the button, so a theme can change it with color
+                background: currentColor;
 
                 transform: rotate(45deg);
 

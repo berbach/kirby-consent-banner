@@ -242,7 +242,8 @@ class CookieInformation {
             this.createOverlay();
         }
         this.previouslyFocused = document.activeElement;
-        this.overlay.style.zIndex = '100';
+        // one step above the banner ($z-index in _consentBanner.scss)
+        this.overlay.style.zIndex = '10002';
         this.overlay.classList.add('visible');
         // Fokus auf den Dialog-Container (aria-labelledby → Titel wird angesagt).
         this.overlay.focus();
