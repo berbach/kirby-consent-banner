@@ -29,6 +29,10 @@ $radius: var(--bb-cb-radius, 4px);
         font: inherit;
         font-weight: 600;
         line-height: 1.2;
+        // the label in the middle, also when a theme makes buttons flex
+        // containers and the banner stretches them
+        justify-content: center;
+        text-align: center;
         cursor: pointer;
         transition: background-color .15s, color .15s;
 
@@ -73,6 +77,14 @@ $radius: var(--bb-cb-radius, 4px);
         outline: 2px solid $accent;
         outline-offset: 2px;
     }
+}
+
+// Banner and cookie information are focused as a whole when they open
+// (tabindex="-1", so screen readers announce the dialog). Without a mouse
+// click before (page load, keyboard) browsers would draw a focus ring around
+// the whole overlay; the buttons inside keep theirs.
+.#{variables.$prefix}consentbanner[tabindex="-1"]:focus {
+    outline: none;
 }
 
 // Reopens the settings, fixed at the bottom of the viewport
