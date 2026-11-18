@@ -1,6 +1,7 @@
 <?php
 
 use Bb\ConsentBanner\ConsentBanner;
+use Bb\ConsentBanner\ConsentServiceField;
 use Bb\ConsentBanner\HiddenPage;
 use Bb\ConsentBanner\Panel;
 use Bb\ConsentBanner\Renderer;
@@ -110,11 +111,12 @@ Kirby::plugin(ConsentBanner::PLUGIN, [
         'consent-banner/gate' => __DIR__ . '/snippets/consent-banner/gate.php',
     ],
 
-    // Blueprints: type: consentservice (text field with the service search)
+    // Blueprints: type: consentservice (text field with the service search);
+    // Kirby 6 only accepts a field class, Kirby 5 the array definition
     'fields' => [
-        'consentservice' => [
-            'extends' => 'text',
-        ],
+        'consentservice' => version_compare((string) Kirby::version(), '6.0.0-alpha', '>=')
+            ? ConsentServiceField::class
+            : ['extends' => 'text'],
     ],
 
     'areas' => [
@@ -129,7 +131,7 @@ Kirby::plugin(ConsentBanner::PLUGIN, [
                 'method' => 'GET',
                 'action' => function (): array {
                     if (ConsentBanner::instance()->hasAccess() === false) {
-                        throw new PermissionException(['fallback' => Panel::t('error.access')]);
+                        throw new PermissionException(fallback: Panel::t('error.access'));
                     }
                     return [
                         'results' => ServiceDatabase::default()->search((string) $this->requestQuery('q', '')),

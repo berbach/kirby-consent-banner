@@ -20,6 +20,6 @@ class HiddenPage extends Page
         $contentType = 'html',
         VersionId|string|null $versionId = null,
     ): string {
-        throw new NotFoundException(['fallback' => 'The page does not exist']);
+        throw new NotFoundException(fallback: 'The page does not exist');
     }
 }

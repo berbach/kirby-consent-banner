@@ -153,7 +153,10 @@ $max-width: $container-max-width !default;
 
             .#{variables.$prefix}cb-overlay & {
                 @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
-                    flex-flow: row nowrap;
+                    // Wider labels (e.g. capitals of a theme) wrap the last
+                    // button into a new row instead of running into the
+                    // padding on the right
+                    flex-flow: row wrap;
                     gap: unit.bb-calc-rem(10);
                 }
             }

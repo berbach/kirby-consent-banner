@@ -6,7 +6,7 @@ Kirby-Plugin `bb/kirby-consent-banner`: ein Consent-Banner mit
 Seiten-Reload**. Es ist die Kirby-Fassung der TYPO3-Extension
 `bb/consent_banner` und hat denselben Aufbau.
 
-*Consent banner for Kirby 5 with Google Consent Mode v2, Matomo and script
+*Consent banner for Kirby 5 and 6 with Google Consent Mode v2, Matomo and script
 control, a consent log (SQLite), a cookie information window and placeholders
 for embedded content. The documentation is in German; the panel and the banner
 speak German and English.*
@@ -42,8 +42,12 @@ speak German and English.*
 
 | Komponente | Anforderung |
 | --- | --- |
-| Kirby | 5 |
-| PHP | 8.2 oder neuer, mit `pdo_sqlite` |
+| Kirby | 5 oder 6 (getestet mit 5.6.3 und 6.0.0-rc.1) |
+| PHP | 8.2 oder neuer (Kirby 6: 8.3), mit `pdo_sqlite` |
+
+Unter Kirby 6 ist das Feld `consentservice` eine Klasse
+(`src/ConsentServiceField.php`), weil Kirby 6 keine Felder als Array mehr
+annimmt; unter Kirby 5 bleibt es die Array-Definition.
 
 ## Installation
 
