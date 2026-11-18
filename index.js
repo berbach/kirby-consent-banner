@@ -319,7 +319,11 @@
     data() {
       return { results: [], open: false, active: -1, searched: false, timer: null, request: 0 };
     },
+    // Vue 2 (Kirby 5) and Vue 3 (Kirby 6)
     beforeDestroy() {
+      window.clearTimeout(this.timer);
+    },
+    beforeUnmount() {
       window.clearTimeout(this.timer);
     },
     methods: {

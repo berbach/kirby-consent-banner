@@ -156,7 +156,7 @@ final class Panel
         $this->guard();
         $kirby = $this->consentBanner->kirby;
         if ($this->consentBanner->page() !== null) {
-            throw new PermissionException(['fallback' => self::t('error.banner.exists')]);
+            throw new PermissionException(fallback: self::t('error.banner.exists'));
         }
         $title = trim((string) $kirby->request()->get('title', ''));
         $title = $title !== '' ? $title : self::t('banner.default.title');
@@ -164,7 +164,7 @@ final class Panel
         $parentId = dirname($id);
         $parent = $parentId === '.' ? $kirby->site() : $kirby->site()->findPageOrDraft($parentId);
         if ($parent === null) {
-            throw new PermissionException(['fallback' => self::t('error.banner.parent')]);
+            throw new PermissionException(fallback: self::t('error.banner.parent'));
         }
 
         $banner = $parent->createChild([
@@ -279,7 +279,7 @@ final class Panel
     private function guard(): void
     {
         if ($this->consentBanner->hasAccess() === false) {
-            throw new PermissionException(['fallback' => self::t('error.access')]);
+            throw new PermissionException(fallback: self::t('error.access'));
         }
     }
 
