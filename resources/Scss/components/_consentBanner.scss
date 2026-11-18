@@ -20,6 +20,9 @@ $background-full-width: #f0f0f0 !default;
 $container-max-width: unit.bb-calc-rem(1440) !default;
 $min-padding: 16px !default;
 $max-width: $container-max-width !default;
+// Wide enough for the three buttons in one row, also with wider labels
+// (e.g. capitals in Theme Four)
+$overlay-max-width: unit.bb-calc-rem(880) !default;
 
 .#{variables.$prefix}consentbanner {
     $self: &;
@@ -153,9 +156,8 @@ $max-width: $container-max-width !default;
 
             .#{variables.$prefix}cb-overlay & {
                 @media screen and (min-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"))) {
-                    // Wider labels (e.g. capitals of a theme) wrap the last
-                    // button into a new row instead of running into the
-                    // padding on the right
+                    // One row; only on narrow screens the last button wraps
+                    // into a new row instead of running into the padding
                     flex-flow: row wrap;
                     gap: unit.bb-calc-rem(10);
                 }
@@ -391,7 +393,7 @@ $max-width: $container-max-width !default;
         //}
 
         .#{variables.$prefix}cb-overlay & {
-            max-width: unit.bb-calc-rem(map.get(variables.$breakpoints, "medium"));
+            max-width: $overlay-max-width;
             background: $white;
 
             margin: 0 auto;
