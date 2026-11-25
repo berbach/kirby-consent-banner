@@ -42,7 +42,7 @@ speak German and English.*
 
 | Komponente | Anforderung |
 | --- | --- |
-| Kirby | 5 oder 6 (getestet mit 5.6.3 und 6.0.0-rc.1) |
+| Kirby | 5 oder 6 (getestet mit 5.6.3 und 6.0.0) |
 | PHP | 8.2 oder neuer (Kirby 6: 8.3), mit `pdo_sqlite` |
 
 Unter Kirby 6 ist das Feld `consentservice` eine Klasse
@@ -124,6 +124,8 @@ einzige Datei und das Stylesheet bindet Bilder als Data-URI ein.
 composer install
 composer test
 ```
+
+Die CI testet Kirby 5 (PHP 8.2–8.4) und Kirby 6 (PHP 8.3–8.4).
 
 ## Lizenz
 

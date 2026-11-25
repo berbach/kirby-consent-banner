@@ -64,11 +64,14 @@ final class KirbyTest extends TestCase
             'service_provider' => '.youtube.com, .youtube-nocookie.com',
             'cookies' => "- \n  cookie_name: YSC\n  cookie_type: Session-Cookie\n  cookie_purpose: Statistics\n  cookie_lifetime: Session\n  cookie_description: Counts views\n",
         ]);
+        // Ein Signal, das es nicht gibt (z. B. aus einer älteren Version), muss
+        // das Plugin aussortieren. Kirby 6 lässt eine Seite mit einer ungültigen
+        // Option nicht veröffentlichen, daher kommt es erst danach dazu.
         $this->child($media, 'analytics', ConsentBanner::TEMPLATE_COMPONENT, 2, [
             'title' => 'Analytics',
             'integration_type' => 'google_consent_mode',
-            'consent_mode_signals' => 'analytics_storage, not_a_signal',
-        ]);
+            'consent_mode_signals' => 'analytics_storage',
+        ])->update(['consent_mode_signals' => 'analytics_storage, not_a_signal']);
         $this->child($media, 'chat', ConsentBanner::TEMPLATE_COMPONENT, 3, [
             'title' => 'Chat',
             'integration_type' => 'script',
